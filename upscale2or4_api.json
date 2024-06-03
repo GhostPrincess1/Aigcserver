@@ -1,0 +1,141 @@
+{
+  "1": {
+    "inputs": {
+      "image": "下载 (1).jfif",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "2": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2.pth"
+    },
+    "class_type": "UpscaleModelLoader"
+  },
+  "3": {
+    "inputs": {
+      "upscale_model": [
+        "2",
+        0
+      ],
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel"
+  },
+  "6": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "7": {
+    "inputs": {
+      "seed": 120370796521142,
+      "steps": 20,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.4,
+      "model": [
+        "6",
+        0
+      ],
+      "positive": [
+        "17",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "9": {
+    "inputs": {
+      "text": "embedding:badoutV2",
+      "clip": [
+        "6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "11": {
+    "inputs": {
+      "pixels": [
+        "3",
+        0
+      ],
+      "vae": [
+        "6",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "12": {
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "6",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "15": {
+    "inputs": {
+      "filename_prefix": "upscale",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "16": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.6,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "17": {
+    "inputs": {
+      "text": [
+        "16",
+        0
+      ],
+      "max_frames": 120,
+      "current_frame": 0,
+      "pre_text": "",
+      "app_text": "",
+      "pw_a": 0,
+      "pw_b": 0,
+      "pw_c": 0,
+      "pw_d": 0,
+      "clip": [
+        "6",
+        1
+      ]
+    },
+    "class_type": "PromptSchedule"
+  }
+}

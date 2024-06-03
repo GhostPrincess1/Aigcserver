@@ -1,0 +1,149 @@
+{
+  "2": {
+    "inputs": {
+      "ckpt_name": "xbb_v1.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "3": {
+    "inputs": {
+      "lora_name": "huonv.safetensors",
+      "strength_model": 0.75,
+      "strength_clip": 1,
+      "model": [
+        "2",
+        0
+      ],
+      "clip": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "4": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer"
+  },
+  "6": {
+    "inputs": {
+      "text": "embedding:EasyNegativeV2",
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "31": {
+    "inputs": {
+      "text": [
+        "32",
+        0
+      ],
+      "max_frames": 500,
+      "current_frame": 0,
+      "pre_text": "(masterpiece:1.2), (best quality, highest quality),xbb,(chibi:0.6),",
+      "app_text": "",
+      "pw_a": 0,
+      "pw_b": 0,
+      "pw_c": 0,
+      "pw_d": 0,
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "PromptSchedule"
+  },
+  "32": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "image": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "34": {
+    "inputs": {
+      "image": "20231016-130624.jpg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "40": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "41": {
+    "inputs": {
+      "width": 200,
+      "height": 248,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "42": {
+    "inputs": {
+      "samples": [
+        "45",
+        0
+      ],
+      "vae": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "44": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "45": {
+    "inputs": {
+      "seed": 281932849576175,
+      "steps": 15,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "31",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  }
+}

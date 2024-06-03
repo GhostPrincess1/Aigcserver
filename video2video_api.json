@@ -1,0 +1,493 @@
+{
+  "13": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "14": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "13",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "15": {
+    "inputs": {
+      "model_name": "mm_sd_v15.ckpt",
+      "beta_schedule": "sqrt_linear (AnimateDiff)",
+      "motion_scale": 1,
+      "apply_v2_models_properly": true,
+      "model": [
+        "13",
+        0
+      ],
+      "context_options": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ADE_AnimateDiffLoaderWithContext",
+    "_meta": {
+      "title": "AnimateDiff Loader 🎭🅐🅓"
+    }
+  },
+  "16": {
+    "inputs": {
+      "context_length": 16,
+      "context_stride": 1,
+      "context_overlap": 4,
+      "context_schedule": "uniform",
+      "closed_loop": false
+    },
+    "class_type": "ADE_AnimateDiffUniformContextOptions",
+    "_meta": {
+      "title": "Uniform Context Options 🎭🅐🅓"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": "",
+      "max_frames": 300,
+      "current_frame": 0,
+      "print_output": false,
+      "pre_text": [
+        "88",
+        0
+      ],
+      "app_text": "0",
+      "pw_a": 0,
+      "pw_b": 0,
+      "pw_c": 0,
+      "pw_d": 0,
+      "clip": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "PromptSchedule",
+    "_meta": {
+      "title": "Prompt Schedule 📅🅕🅝"
+    }
+  },
+  "19": {
+    "inputs": {
+      "seed": 882715576657586,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "132",
+        0
+      ],
+      "negative": [
+        "132",
+        1
+      ],
+      "latent_image": [
+        "125",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "21": {
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "13",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "24": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_image": true,
+      "crf": 20,
+      "save_metadata": true,
+      "audio_file": "",
+      "Sync playback": null,
+      "videopreview": {
+        "hidden": false,
+        "paused": false,
+        "params": {
+          "filename": "AnimateDiff_00140.mp4",
+          "subfolder": "",
+          "type": "output",
+          "format": "video/h264-mp4"
+        }
+      },
+      "images": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "25": {
+    "inputs": {
+      "text": "embedding:badoutV2.pt",
+      "clip": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "34": {
+    "inputs": {
+      "strength": 0.4,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "25",
+        0
+      ],
+      "control_net": [
+        "37",
+        0
+      ],
+      "image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": [
+        "81",
+        0
+      ],
+      "image": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "37": {
+    "inputs": {
+      "control_net_name": "control_v11u_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "39": {
+    "inputs": {
+      "strength": 0.9,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "34",
+        0
+      ],
+      "negative": [
+        "34",
+        1
+      ],
+      "control_net": [
+        "41",
+        0
+      ],
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "41": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "62": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": [
+        "81",
+        0
+      ],
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384.onnx",
+      "image": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "68": {
+    "inputs": {
+      "video": "20240118-185335.mp4",
+      "force_rate": 0,
+      "force_size": "Disabled",
+      "frame_load_cap": 300,
+      "skip_first_frames": 4,
+      "select_every_nth": 1,
+      "choose file to upload": "video",
+      "videopreview": {
+        "hidden": false,
+        "paused": false,
+        "params": {
+          "filename": "20240118-185335.mp4",
+          "type": "input",
+          "format": "video"
+        }
+      },
+      "$$comfy_animation_preview": {
+        "height": 200
+      }
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "Load Video (Upload) 🎥🅥🅗🅢"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image_gen_width": [
+        "82",
+        0
+      ],
+      "image_gen_height": [
+        "82",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "82": {
+    "inputs": {
+      "image": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "84": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": [
+        "90",
+        0
+      ],
+      "height": [
+        "93",
+        0
+      ],
+      "crop": "center",
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "88": {
+    "inputs": {
+      "Text": "AFK,"
+    },
+    "class_type": "Text box",
+    "_meta": {
+      "title": "Text box"
+    }
+  },
+  "90": {
+    "inputs": {
+      "int": 520
+    },
+    "class_type": "Width/Height Literal",
+    "_meta": {
+      "title": "Width/Height Literal"
+    }
+  },
+  "93": {
+    "inputs": {
+      "int": 768
+    },
+    "class_type": "Width/Height Literal",
+    "_meta": {
+      "title": "Width/Height Literal"
+    }
+  },
+  "125": {
+    "inputs": {
+      "pixels": [
+        "84",
+        0
+      ],
+      "vae": [
+        "13",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "130": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "131": {
+    "inputs": {
+      "ckpt_name": "film_net_fp32.pt",
+      "clear_cache_after_n_frames": 10,
+      "multiplier": 2,
+      "cache_in_fp16": true,
+      "frames": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "FILM VFI",
+    "_meta": {
+      "title": "FILM VFI"
+    }
+  },
+  "132": {
+    "inputs": {
+      "strength": 0.9,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "39",
+        0
+      ],
+      "negative": [
+        "39",
+        1
+      ],
+      "control_net": [
+        "133",
+        0
+      ],
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "133": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "135": {
+    "inputs": {
+      "coarse": "disable",
+      "resolution": [
+        "81",
+        0
+      ],
+      "image": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "LineArtPreprocessor",
+    "_meta": {
+      "title": "Realistic Lineart"
+    }
+  }
+}
