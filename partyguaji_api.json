@@ -1,0 +1,160 @@
+{
+  "8": {
+    "inputs": {
+      "samples": [
+        "36",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "PARTY",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ckpt_name": "party_SDXL_v1.fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "36": {
+    "inputs": {
+      "seed": 1109153136664296,
+      "steps": 28,
+      "cfg": 10,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "50",
+        0
+      ],
+      "latent_image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "46": {
+    "inputs": {
+      "width": 1336,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "49": {
+    "inputs": {
+      "text": [
+        "125",
+        0
+      ],
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "50": {
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "125": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "127",
+        0
+      ],
+      "b": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "127": {
+    "inputs": {
+      "prompt": "TRQ style,isometric,clear black background,"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "132": {
+    "inputs": {
+      "insanitylevel": 1,
+      "artist": "anime",
+      "imagetype": "all",
+      "imagemodechance": 20,
+      "subject": "all",
+      "custom_subject": "",
+      "custom_outfit": "",
+      "subject_subtype_objects": "all",
+      "subject_subtypes_humanoids": "all",
+      "humanoids_gender": "all",
+      "subject_subtypes_concepts": "all",
+      "emojis": false,
+      "base_model": "SDXL",
+      "prompt_enhancer": "none",
+      "seed": 429611156228964
+    },
+    "class_type": "OneButtonPrompt",
+    "_meta": {
+      "title": "One Button Prompt"
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "1": {
+    "inputs": {
+      "seed": 72239200847172,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.55,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "19",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "096dfac12d3ab365ec13d7c5.jpeg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "upscale_model": [
+        "7",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model_name": "RealESRGAN_x4.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "8": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.5,
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "10": {
+    "inputs": {
+      "pixels": [
+        "8",
+        0
+      ],
+      "vae": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "11": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "13": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": "",
+      "trailing_comma": "solo, blush, smile, open_mouth, simple_background, red_eyes, white_background, :d, no_humans, :3, looking_up",
+      "exclude_tags": "",
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "16": {
+    "inputs": {
+      "python_expression": "a + b",
+      "print_to_console": "True",
+      "a": [
+        "24",
+        0
+      ],
+      "b": [
+        "13",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": [
+        "16",
+        0
+      ],
+      "clip": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "19": {
+    "inputs": {
+      "text": "embedding:badoutV2.pt",
+      "clip": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "20": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "22": {
+    "inputs": {
+      "samples": [
+        "1",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "upscale",
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

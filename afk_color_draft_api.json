@@ -1,0 +1,380 @@
+{
+  "8": {
+    "inputs": {
+      "samples": [
+        "36",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ckpt_name": "riotDiffusionXLLeagueOfLegendsSplash_v20.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "36": {
+    "inputs": {
+      "seed": 755628473804293,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.5,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "105",
+        0
+      ],
+      "negative": [
+        "105",
+        1
+      ],
+      "latent_image": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "49": {
+    "inputs": {
+      "text": [
+        "143",
+        0
+      ],
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "50": {
+    "inputs": {
+      "text": "low aesthetic, booru, tumblr, text, watermark, signature, artist name",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image_gen_width": [
+        "99",
+        0
+      ],
+      "image_gen_height": [
+        "99",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "98": {
+    "inputs": {
+      "image": "jiajdnj_00764_.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "image": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "104": {
+    "inputs": {
+      "control_net_name": "ttplanetSDXLControlnet_v20Fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "105": {
+    "inputs": {
+      "strength": 0.7000000000000001,
+      "start_percent": 0,
+      "end_percent": 0.5,
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "50",
+        0
+      ],
+      "control_net": [
+        "104",
+        0
+      ],
+      "image": [
+        "141",
+        0
+      ],
+      "weights_override": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "136": {
+    "inputs": {
+      "pixels": [
+        "140",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "140": {
+    "inputs": {
+      "size": 1580,
+      "interpolation_mode": "bicubic",
+      "image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "JWImageResizeByLongerSide",
+    "_meta": {
+      "title": "Image Resize by Longer Side"
+    }
+  },
+  "141": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": [
+        "97",
+        0
+      ],
+      "image": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "142": {
+    "inputs": {
+      "base_multiplier": 0.825,
+      "flip_weights": false
+    },
+    "class_type": "ScaledSoftControlNetWeights",
+    "_meta": {
+      "title": "Scaled Soft Weights 🛂🅐🅒🅝"
+    }
+  },
+  "143": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "144",
+        0
+      ],
+      "b": [
+        "155",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "144": {
+    "inputs": {
+      "prompt": "best aesthetic,"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "145": {
+    "inputs": {
+      "upscale_model": [
+        "146",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "146": {
+    "inputs": {
+      "model_name": "ESRGAN_4x.pth"
+    },
+    "class_type": "Upscale Model Loader",
+    "_meta": {
+      "title": "Upscale Model Loader"
+    }
+  },
+  "147": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.3,
+      "image": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "148": {
+    "inputs": {
+      "pixels": [
+        "147",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "149": {
+    "inputs": {
+      "seed": 136501008402123,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.35000000000000003,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "50",
+        0
+      ],
+      "latent_image": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "152": {
+    "inputs": {
+      "samples": [
+        "149",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "153": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "152",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "155": {
+    "inputs": {
+      "image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "GptTag",
+    "_meta": {
+      "title": "GptTag"
+    }
+  }
+}

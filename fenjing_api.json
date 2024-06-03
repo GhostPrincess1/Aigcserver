@@ -1,0 +1,314 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "text": "embedding:EasyNegative.pt",
+      "clip": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "seed": 157348077621632,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": [
+        "227",
+        1
+      ],
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "125",
+        0
+      ],
+      "negative": [
+        "125",
+        1
+      ],
+      "latent_image": [
+        "205",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "21": {
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "70": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer"
+  },
+  "118": {
+    "inputs": {
+      "strength": [
+        "222",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "148",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "control_net": [
+        "121",
+        0
+      ],
+      "image": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "119": {
+    "inputs": {
+      "resolution": 1024,
+      "image": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "AnimeLineArtPreprocessor"
+  },
+  "121": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "123": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "139",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor"
+  },
+  "125": {
+    "inputs": {
+      "strength": [
+        "223",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "118",
+        0
+      ],
+      "negative": [
+        "118",
+        1
+      ],
+      "control_net": [
+        "126",
+        0
+      ],
+      "image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "126": {
+    "inputs": {
+      "control_net_name": "control_v11u_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "139": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 512,
+      "height": 768,
+      "crop": "center",
+      "image": [
+        "229",
+        0
+      ]
+    },
+    "class_type": "ImageScale"
+  },
+  "140": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 512,
+      "height": 768,
+      "crop": "center",
+      "image": [
+        "229",
+        0
+      ]
+    },
+    "class_type": "ImageScale"
+  },
+  "148": {
+    "inputs": {
+      "text": [
+        "192",
+        0
+      ],
+      "clip": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "192": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "194",
+        0
+      ],
+      "b": [
+        "193",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings"
+  },
+  "193": {
+    "inputs": {
+      "Text": [
+        "230",
+        0
+      ]
+    },
+    "class_type": "Text box"
+  },
+  "194": {
+    "inputs": {
+      "Text": "(best quality, highest quality),AFK,"
+    },
+    "class_type": "Text box"
+  },
+  "205": {
+    "inputs": {
+      "pixels": [
+        "139",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "222": {
+    "inputs": {
+      "text": "1",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "223": {
+    "inputs": {
+      "text": "0.22",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "224": {
+    "inputs": {
+      "text": "0.6",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "225": {
+    "inputs": {
+      "text": "0.2",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "227": {
+    "inputs": {
+      "text": "0.45",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "228": {
+    "inputs": {
+      "text": "0.6",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number"
+  },
+  "229": {
+    "inputs": {
+      "image": "下载 (6).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "230": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "tags": "outdoors, sky, day, cloud, tree, no_humans, cloudy_sky, ground_vehicle, nature, scenery, motor_vehicle, snow, forest, mountain, car, winter, vehicle_focus, pine_tree",
+      "image": [
+        "229",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "231": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}

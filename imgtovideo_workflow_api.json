@@ -1,0 +1,250 @@
+{
+  "1": {
+    "inputs": {
+      "seed": 397608686530330,
+      "steps": 15,
+      "cfg": 7,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "18",
+        0
+      ],
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "latent_image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "2": {
+    "inputs": {
+      "ckpt_name": "xbb_v1.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "4": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer"
+  },
+  "6": {
+    "inputs": {
+      "text": "embedding:EasyNegativeV2",
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "31",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "control_net": [
+        "8",
+        0
+      ],
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "8": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "12": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "7",
+        1
+      ],
+      "control_net": [
+        "13",
+        0
+      ],
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "13": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_scribble_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "16": {
+    "inputs": {
+      "directory": "all",
+      "choose folder to upload": "directory",
+      "image_load_cap": 500,
+      "skip_first_images": 0,
+      "select_every_nth": 1
+    },
+    "class_type": "VHS_LoadImages"
+  },
+  "18": {
+    "inputs": {
+      "model_name": "mm_sd_v15.ckpt",
+      "beta_schedule": "sqrt_linear (AnimateDiff)",
+      "model": [
+        "2",
+        0
+      ],
+      "context_options": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ADE_AnimateDiffLoaderWithContext"
+  },
+  "19": {
+    "inputs": {
+      "context_length": 16,
+      "context_stride": 1,
+      "context_overlap": 4,
+      "context_schedule": "uniform",
+      "closed_loop": false
+    },
+    "class_type": "ADE_AnimateDiffUniformContextOptions"
+  },
+  "20": {
+    "inputs": {
+      "directory": "lines",
+      "choose folder to upload": "directory",
+      "image_load_cap": 500,
+      "skip_first_images": 0,
+      "select_every_nth": 1
+    },
+    "class_type": "VHS_LoadImages"
+  },
+  "21": {
+    "inputs": {
+      "samples": [
+        "1",
+        0
+      ],
+      "vae": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "22": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "25": {
+    "inputs": {
+      "width": 304,
+      "height": 400,
+      "batch_size": [
+        "20",
+        2
+      ]
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "31": {
+    "inputs": {
+      "text": [
+        "32",
+        0
+      ],
+      "max_frames": 500,
+      "current_frame": 0,
+      "pre_text": "(masterpiece:1.2), (best quality, highest quality),xbb,(chibi:0.6),((White background)),",
+      "app_text": "",
+      "pw_a": 0,
+      "pw_b": 0,
+      "pw_c": 0,
+      "pw_d": 0,
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "PromptSchedule"
+  },
+  "32": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "image": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "34": {
+    "inputs": {
+      "image": "20231016-130942 (1).jpg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
+    "inputs": {
+      "image": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "Image Remove Background (rembg)"
+  }
+}

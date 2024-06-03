@@ -1,0 +1,536 @@
+{
+  "29": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "30": {
+    "inputs": {
+      "text": [
+        "48",
+        0
+      ],
+      "clip": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "31": {
+    "inputs": {
+      "text": "embedding:badoutV2.pt",
+      "clip": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "32": {
+    "inputs": {
+      "seed": 487577742016297,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "29",
+        0
+      ],
+      "positive": [
+        "106",
+        0
+      ],
+      "negative": [
+        "106",
+        1
+      ],
+      "latent_image": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "samples": [
+        "32",
+        0
+      ],
+      "vae": [
+        "29",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "34": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "29",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "43": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": [
+        "116",
+        0
+      ],
+      "height": [
+        "116",
+        1
+      ],
+      "crop": "center",
+      "image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "45": {
+    "inputs": {
+      "pixels": [
+        "43",
+        0
+      ],
+      "vae": [
+        "29",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "47": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.1,
+      "character_threshold": 0.85,
+      "replace_underscore": "",
+      "trailing_comma": "outdoors, sky, day, cloud, tree, blue_sky, no_humans, shadow, traditional_media, ground_vehicle, nature, scenery, motor_vehicle, snow, forest, mountain, realistic, car, road, winter, vehicle_focus, bare_tree, train, train_station, railroad_tracks, truck, real_world_location, pine_tree, mount_fuji",
+      "exclude_tags": "",
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "48": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "True",
+      "a": [
+        "117",
+        0
+      ],
+      "b": [
+        "118",
+        0
+      ],
+      "c": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "49": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_softedge_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "50": {
+    "inputs": {
+      "strength": 0.1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "30",
+        0
+      ],
+      "negative": [
+        "31",
+        0
+      ],
+      "control_net": [
+        "49",
+        0
+      ],
+      "image": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "51": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": 1024,
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "PiDiNetPreprocessor",
+    "_meta": {
+      "title": "PiDiNet Soft-Edge Lines"
+    }
+  },
+  "53": {
+    "inputs": {
+      "strength": 0.1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "50",
+        0
+      ],
+      "negative": [
+        "50",
+        1
+      ],
+      "control_net": [
+        "54",
+        0
+      ],
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "54": {
+    "inputs": {
+      "control_net_name": "control_v11f1e_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "55": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "60": {
+    "inputs": {
+      "ckpt_name": "sdXL_v10VAEFix.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "63": {
+    "inputs": {
+      "text": "(deformed iris, deformed pupils), text, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, (extra fingers), (mutated hands), poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, (fused fingers), (too many fingers), long neck, camera",
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "64": {
+    "inputs": {
+      "text": [
+        "118",
+        0
+      ],
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "69": {
+    "inputs": {
+      "vae": [
+        "60",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "79": {
+    "inputs": {
+      "image": "下载 (5) (1).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 512,
+      "height": 512,
+      "crop": "center",
+      "image": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "pixels": [
+        "93",
+        0
+      ],
+      "vae": [
+        "60",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "95": {
+    "inputs": {
+      "seed": 422173073219524,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.5,
+      "model": [
+        "60",
+        0
+      ],
+      "positive": [
+        "64",
+        0
+      ],
+      "negative": [
+        "63",
+        0
+      ],
+      "latent_image": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "96": {
+    "inputs": {
+      "samples": [
+        "95",
+        0
+      ],
+      "vae": [
+        "60",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "104": {
+    "inputs": {
+      "pixels": [
+        "43",
+        0
+      ],
+      "vae": [
+        "29",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "106": {
+    "inputs": {
+      "strength": [
+        "113",
+        0
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "53",
+        0
+      ],
+      "negative": [
+        "53",
+        1
+      ],
+      "control_net": [
+        "107",
+        0
+      ],
+      "image": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "107": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "111": {
+    "inputs": {
+      "coarse": "disable",
+      "resolution": 1024,
+      "image": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "LineArtPreprocessor",
+    "_meta": {
+      "title": "Realistic Lineart"
+    }
+  },
+  "113": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "Float",
+    "_meta": {
+      "title": "Float"
+    }
+  },
+  "114": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "116": {
+    "inputs": {
+      "image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "117": {
+    "inputs": {
+      "string": ""
+    },
+    "class_type": "Simple String",
+    "_meta": {
+      "title": "Simple String"
+    }
+  },
+  "118": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

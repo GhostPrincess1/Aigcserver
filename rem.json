@@ -1,0 +1,313 @@
+{
+  "last_node_id": 116,
+  "last_link_id": 176,
+  "nodes": [
+    {
+      "id": 110,
+      "type": "SaveImage",
+      "pos": [
+        2049,
+        1458
+      ],
+      "size": {
+        "0": 315,
+        "1": 270.0000305175781
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 172,
+          "label": "images"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "rem"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "GroundingDinoSAMSegment (segment anything)",
+      "pos": [
+        1086,
+        1346
+      ],
+      "size": {
+        "0": 355.8587951660156,
+        "1": 127.91217041015625
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 13,
+          "slot_index": 0,
+          "label": "sam_model"
+        },
+        {
+          "name": "grounding_dino_model",
+          "type": "GROUNDING_DINO_MODEL",
+          "link": 14,
+          "slot_index": 1,
+          "label": "grounding_dino_model"
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 15,
+          "slot_index": 2,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            171
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroundingDinoSAMSegment (segment anything)"
+      },
+      "widgets_values": [
+        "human",
+        0.3
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 9,
+      "type": "SAMModelLoader (segment anything)",
+      "pos": [
+        659,
+        1351
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "SAM_MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMModelLoader (segment anything)"
+      },
+      "widgets_values": [
+        "sam_hq_vit_h (2.57GB)"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "GroundingDinoModelLoader (segment anything)",
+      "pos": [
+        629.2161805079307,
+        1470.5475463603377
+      ],
+      "size": {
+        "0": 361.20001220703125,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "GROUNDING_DINO_MODEL",
+          "type": "GROUNDING_DINO_MODEL",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "GROUNDING_DINO_MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GroundingDinoModelLoader (segment anything)"
+      },
+      "widgets_values": [
+        "GroundingDINO_SwinB (938MB)"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "Image Remove Background (rembg)",
+      "pos": [
+        1714,
+        1352
+      ],
+      "size": {
+        "0": 260.3999938964844,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 171,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            172
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Remove Background (rembg)"
+      },
+      "widgets_values": [
+        "u2net"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        637,
+        1657
+      ],
+      "size": {
+        "0": 397.9753723144531,
+        "1": 484.27642822265625
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "61d341e7a179bd19f89fcdae.png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      13,
+      9,
+      0,
+      8,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      14,
+      10,
+      0,
+      8,
+      1,
+      "GROUNDING_DINO_MODEL"
+    ],
+    [
+      15,
+      2,
+      0,
+      8,
+      2,
+      "IMAGE"
+    ],
+    [
+      171,
+      8,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      172,
+      112,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Edit Mask",
+      "bounding": [
+        619,
+        935,
+        1654,
+        1292
+      ],
+      "color": "#a1309b",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

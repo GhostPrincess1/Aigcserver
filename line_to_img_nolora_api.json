@@ -1,0 +1,623 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "AFK_V1.72_MIX_VAE.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "embedding:EasyNegative.pt",
+      "clip": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "seed": 710575526104502,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": [
+        "227",
+        1
+      ],
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "125",
+        0
+      ],
+      "negative": [
+        "125",
+        1
+      ],
+      "latent_image": [
+        "205",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "21": {
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "70": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "114": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "118": {
+    "inputs": {
+      "strength": [
+        "222",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "148",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "control_net": [
+        "121",
+        0
+      ],
+      "image": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "119": {
+    "inputs": {
+      "resolution": 1024,
+      "image": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "AnimeLineArtPreprocessor",
+    "_meta": {
+      "title": "Anime Lineart"
+    }
+  },
+  "120": {
+    "inputs": {
+      "image": "IGAME_upscaleimg_saved_image (1).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "线稿输入"
+    }
+  },
+  "121": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "123": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "125": {
+    "inputs": {
+      "strength": [
+        "223",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "118",
+        0
+      ],
+      "negative": [
+        "118",
+        1
+      ],
+      "control_net": [
+        "126",
+        0
+      ],
+      "image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "126": {
+    "inputs": {
+      "control_net_name": "control_v11u_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "129": {
+    "inputs": {
+      "image": "IGAME_upscaleimg_saved_image.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "色稿输入"
+    }
+  },
+  "148": {
+    "inputs": {
+      "text": [
+        "192",
+        0
+      ],
+      "clip": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "152": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.5,
+      "image": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "153": {
+    "inputs": {
+      "upscale_model": [
+        "154",
+        0
+      ],
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "154": {
+    "inputs": {
+      "model_name": "ESRGAN_4x.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "163": {
+    "inputs": {
+      "strength": [
+        "224",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "148",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "control_net": [
+        "165",
+        0
+      ],
+      "image": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "164": {
+    "inputs": {
+      "resolution": 1024,
+      "image": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "AnimeLineArtPreprocessor",
+    "_meta": {
+      "title": "Anime Lineart"
+    }
+  },
+  "165": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "166": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "152",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "167": {
+    "inputs": {
+      "strength": [
+        "225",
+        1
+      ],
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "163",
+        0
+      ],
+      "negative": [
+        "163",
+        1
+      ],
+      "control_net": [
+        "168",
+        0
+      ],
+      "image": [
+        "166",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "168": {
+    "inputs": {
+      "control_net_name": "control_v11u_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "171": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.5,
+      "image": [
+        "172",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "172": {
+    "inputs": {
+      "upscale_model": [
+        "173",
+        0
+      ],
+      "image": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "173": {
+    "inputs": {
+      "model_name": "ESRGAN_4x.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "192": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "230",
+        0
+      ],
+      "b": [
+        "229",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "198": {
+    "inputs": {
+      "seed": 977782776993915,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": [
+        "228",
+        1
+      ],
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "167",
+        0
+      ],
+      "negative": [
+        "167",
+        1
+      ],
+      "latent_image": [
+        "199",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "199": {
+    "inputs": {
+      "pixels": [
+        "152",
+        0
+      ],
+      "vae": [
+        "200",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "200": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "201": {
+    "inputs": {
+      "samples": [
+        "198",
+        0
+      ],
+      "vae": [
+        "200",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "202": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "201",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "205": {
+    "inputs": {
+      "pixels": [
+        "129",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "222": {
+    "inputs": {
+      "text": "1",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": "1线条控制强度#1"
+    }
+  },
+  "223": {
+    "inputs": {
+      "text": "0.22",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": " 1tile控制强度#0.22"
+    }
+  },
+  "224": {
+    "inputs": {
+      "text": "0.6",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": "2线条控制强度#0.6"
+    }
+  },
+  "225": {
+    "inputs": {
+      "text": "0.2",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": "2tile控制强度#0.2"
+    }
+  },
+  "227": {
+    "inputs": {
+      "text": "0.45",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": "一次重绘幅度#0.45"
+    }
+  },
+  "228": {
+    "inputs": {
+      "text": "0.6",
+      "round_integer": "round"
+    },
+    "class_type": "CR String To Number",
+    "_meta": {
+      "title": "二次重绘幅度#0.6"
+    }
+  },
+  "229": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "230": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

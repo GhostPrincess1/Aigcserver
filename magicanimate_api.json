@@ -1,0 +1,132 @@
+{
+  "11": {
+    "inputs": {
+      "controlnet": "densepose_controlnet\\diffusion_pytorch_model.safetensors",
+      "appearance_encoder": "appearance_encoder\\diffusion_pytorch_model.safetensors",
+      "motion_module": "temporal_attention\\temporal_attention.ckpt",
+      "device": "cuda"
+    },
+    "class_type": "MagicAnimateModelLoader",
+    "_meta": {
+      "title": "Load Magic Animate Model"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "20240117-102728 (1).jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "17": {
+    "inputs": {
+      "seed": 48,
+      "inference_steps": 25,
+      "magic_animate_model": [
+        "11",
+        0
+      ],
+      "image": [
+        "14",
+        0
+      ],
+      "pose_video": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "MagicAnimate",
+    "_meta": {
+      "title": "Magic Animate"
+    }
+  },
+  "23": {
+    "inputs": {
+      "video": "video/20240117-145854 (2).mp4",
+      "frame_start": 0,
+      "frame_limit": 200,
+      "$$comfy_animation_preview": {
+        "height": 827
+      }
+    },
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Load Video"
+    }
+  },
+  "24": {
+    "inputs": {
+      "model": "densepose_r101_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 512,
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "DensePosePreprocessor",
+    "_meta": {
+      "title": "DensePose Estimator"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "46": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_image": true,
+      "crf": 20,
+      "save_metadata": true,
+      "audio_file": "",
+      "Sync playback": null,
+      "vhs_gif_preview__0": "/view?filename=AnimateDiff_00111.mp4&subfolder=&type=output&format=video%2Fh264-mp4",
+      "images": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "54": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": [
+        "42",
+        0
+      ],
+      "height": [
+        "42",
+        1
+      ],
+      "crop": "disabled",
+      "image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  }
+}

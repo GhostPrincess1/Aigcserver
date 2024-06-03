@@ -1,0 +1,461 @@
+{
+  "last_node_id": 54,
+  "last_link_id": 70,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "MagicAnimate",
+      "pos": [
+        2365,
+        21
+      ],
+      "size": {
+        "0": 348.50433349609375,
+        "1": 146
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "magic_animate_model",
+          "type": "MAGIC_ANIMATE_MODEL",
+          "link": 18,
+          "label": "magic_animate_model"
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 44,
+          "slot_index": 1,
+          "label": "image"
+        },
+        {
+          "name": "pose_video",
+          "type": "IMAGE",
+          "link": 28,
+          "label": "pose_video"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            67
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MagicAnimate"
+      },
+      "widgets_values": [
+        48,
+        "randomize",
+        25
+      ]
+    },
+    {
+      "id": 54,
+      "type": "ImageScale",
+      "pos": [
+        3134,
+        560
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 67,
+          "label": "image"
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 69,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 70,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        512,
+        512,
+        "disabled"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "GetImageSize+",
+      "pos": [
+        2384,
+        1051
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 49,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "label": "width",
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "label": "height",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize+"
+      }
+    },
+    {
+      "id": 14,
+      "type": "LoadImage",
+      "pos": [
+        -1030,
+        529
+      ],
+      "size": {
+        "0": 822.3613891601562,
+        "1": 988.6214599609375
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "20240117-102728 (1).jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "LoadVideo",
+      "pos": [
+        -1079,
+        1684
+      ],
+      "size": {
+        "0": 1004.1084594726562,
+        "1": 988.5166015625
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "links": [
+            26,
+            49
+          ],
+          "shape": 3,
+          "label": "frames",
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "frame_count"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "video/20240117-145854 (2).mp4",
+        0,
+        50,
+        "image",
+        null
+      ]
+    },
+    {
+      "id": 24,
+      "type": "DensePosePreprocessor",
+      "pos": [
+        1393,
+        1531
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DensePosePreprocessor"
+      },
+      "widgets_values": [
+        "densepose_r101_fpn_dl.torchscript",
+        "Viridis (MagicAnimate)",
+        512
+      ]
+    },
+    {
+      "id": 46,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5064,
+        62
+      ],
+      "size": [
+        868.3712991627103,
+        1156.3712991627103
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 68,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GIF",
+          "type": "GIF",
+          "links": null,
+          "shape": 3,
+          "label": "GIF"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": [
+        24,
+        0,
+        "AnimateDiff",
+        "video/h264-mp4",
+        false,
+        true,
+        20,
+        true,
+        "",
+        null,
+        "/view?filename=AnimateDiff_00111.mp4&subfolder=&type=output&format=video%2Fh264-mp4"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "MagicAnimateModelLoader",
+      "pos": [
+        -901,
+        27
+      ],
+      "size": {
+        "0": 816.9508666992188,
+        "1": 217.53123474121094
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MAGIC_ANIMATE_MODEL",
+          "type": "MAGIC_ANIMATE_MODEL",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "MAGIC_ANIMATE_MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MagicAnimateModelLoader"
+      },
+      "widgets_values": [
+        "densepose_controlnet\\diffusion_pytorch_model.safetensors",
+        "appearance_encoder\\diffusion_pytorch_model.safetensors",
+        "temporal_attention\\temporal_attention.ckpt",
+        "cuda"
+      ]
+    }
+  ],
+  "links": [
+    [
+      18,
+      11,
+      0,
+      17,
+      0,
+      "MAGIC_ANIMATE_MODEL"
+    ],
+    [
+      26,
+      23,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      24,
+      0,
+      17,
+      2,
+      "IMAGE"
+    ],
+    [
+      44,
+      14,
+      0,
+      17,
+      1,
+      "IMAGE"
+    ],
+    [
+      49,
+      23,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      17,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      54,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      42,
+      0,
+      54,
+      1,
+      "INT"
+    ],
+    [
+      70,
+      42,
+      1,
+      54,
+      2,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

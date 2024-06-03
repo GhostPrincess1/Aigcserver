@@ -1,0 +1,353 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "AFK_V1.72_MIX_VAE.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "4": {
+    "inputs": {
+      "text": "embedding:badoutV2.pt\n\n\n",
+      "clip": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "5": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "69",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "control_net": [
+        "7",
+        0
+      ],
+      "image": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "7": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_softedge.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "8": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "5",
+        1
+      ],
+      "control_net": [
+        "9",
+        0
+      ],
+      "image": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "9": {
+    "inputs": {
+      "control_net_name": "t2iadapter_color_sd14v1.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "10": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "8",
+        1
+      ],
+      "control_net": [
+        "11",
+        0
+      ],
+      "image": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "11": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "12": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "10",
+        1
+      ],
+      "control_net": [
+        "13",
+        0
+      ],
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "13": {
+    "inputs": {
+      "control_net_name": "control_v11f1e_sd15_tile.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "14": {
+    "inputs": {
+      "seed": 890741525230866,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "44",
+        0
+      ],
+      "positive": [
+        "74",
+        0
+      ],
+      "negative": [
+        "74",
+        1
+      ],
+      "latent_image": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "16": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "20": {
+    "inputs": {
+      "image": "static.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "21": {
+    "inputs": {
+      "image": "static.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "22": {
+    "inputs": {
+      "image": "static.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "23": {
+    "inputs": {
+      "image": "static.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "26": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "44",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer"
+  },
+  "44": {
+    "inputs": {
+      "lora_name": "Fay.safetensors",
+      "strength_model": 0,
+      "strength_clip": 0,
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "51": {
+    "inputs": {
+      "resolution": 1024,
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ColorPreprocessor"
+  },
+  "52": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 1024,
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "OpenposePreprocessor"
+  },
+  "53": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor"
+  },
+  "69": {
+    "inputs": {
+      "text": "(best quality, highest quality),AFK,tree,forest,river",
+      "clip": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "71": {
+    "inputs": {
+      "width": 768,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "72": {
+    "inputs": {
+      "image": "static.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "74": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "control_net": [
+        "75",
+        0
+      ],
+      "image": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "75": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_scribble.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced"
+  },
+  "81": {
+    "inputs": {
+      "filename_prefix": "jiadad",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "87": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": 1024,
+      "image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "FakeScribblePreprocessor"
+  },
+  "91": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": 1024,
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PiDiNetPreprocessor"
+  }
+}

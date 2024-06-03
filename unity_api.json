@@ -1,0 +1,383 @@
+{
+  "12": {
+    "inputs": {
+      "image": "下载333 (5) (1).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "ckpt_name": "Igame_Character_SDXL.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "80": {
+    "inputs": {
+      "control_net_name": "control-lora-canny-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "86": {
+    "inputs": {
+      "text": [
+        "244",
+        0
+      ],
+      "clip": [
+        "265",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "116": {
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name,",
+      "clip": [
+        "265",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "214": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "86",
+        0
+      ],
+      "negative": [
+        "116",
+        0
+      ],
+      "control_net": [
+        "80",
+        0
+      ],
+      "image": [
+        "257",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "239": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35000000000000003,
+      "character_threshold": 0.85,
+      "replace_underscore": false,
+      "trailing_comma": false,
+      "exclude_tags": "",
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "244": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "245",
+        0
+      ],
+      "b": [
+        "239",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "245": {
+    "inputs": {
+      "string": "trq style,"
+    },
+    "class_type": "Simple String",
+    "_meta": {
+      "title": "Simple String"
+    }
+  },
+  "251": {
+    "inputs": {
+      "brightness": 0.05,
+      "contrast": 1.1,
+      "saturation": 1,
+      "sharpness": 1,
+      "blur": 0,
+      "gaussian_blur": 0,
+      "edge_enhance": 0,
+      "detail_enhance": "true",
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "Image Filter Adjustments",
+    "_meta": {
+      "title": "Image Filter Adjustments"
+    }
+  },
+  "254": {
+    "inputs": {
+      "image_gen_width": [
+        "256",
+        0
+      ],
+      "image_gen_height": [
+        "256",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "251",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "256": {
+    "inputs": {
+      "image": [
+        "251",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "257": {
+    "inputs": {
+      "preprocessor": "CannyEdgePreprocessor",
+      "resolution": [
+        "254",
+        0
+      ],
+      "image": [
+        "251",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "260": {
+    "inputs": {
+      "transparency": false,
+      "model": "u2net",
+      "post_processing": false,
+      "only_mask": false,
+      "alpha_matting": false,
+      "alpha_matting_foreground_threshold": 240,
+      "alpha_matting_background_threshold": 10,
+      "alpha_matting_erode_size": 10,
+      "background_color": "none",
+      "images": [
+        "264",
+        0
+      ]
+    },
+    "class_type": "Image Rembg (Remove Background)",
+    "_meta": {
+      "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "262": {
+    "inputs": {
+      "seed": 598032949343338,
+      "steps": 25,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.7000000000000001,
+      "model": [
+        "265",
+        0
+      ],
+      "positive": [
+        "214",
+        0
+      ],
+      "negative": [
+        "214",
+        1
+      ],
+      "latent_image": [
+        "263",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "263": {
+    "inputs": {
+      "pixels": [
+        "251",
+        0
+      ],
+      "vae": [
+        "76",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "264": {
+    "inputs": {
+      "samples": [
+        "262",
+        0
+      ],
+      "vae": [
+        "76",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "265": {
+    "inputs": {
+      "lora_name": "Alsa-000012.safetensors",
+      "strength_model": 0.7000000000000001,
+      "strength_clip": 1,
+      "model": [
+        "76",
+        0
+      ],
+      "clip": [
+        "76",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "267": {
+    "inputs": {
+      "top": 0,
+      "left": 0,
+      "right": 2000,
+      "bottom": 2000,
+      "crop_blending": 0.25,
+      "crop_sharpening": 0,
+      "image": [
+        "268",
+        0
+      ],
+      "crop_image": [
+        "260",
+        0
+      ]
+    },
+    "class_type": "Image Paste Crop by Location",
+    "_meta": {
+      "title": "Image Paste Crop by Location"
+    }
+  },
+  "268": {
+    "inputs": {
+      "image": "b.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "271": {
+    "inputs": {
+      "filename_prefix": "unity1",
+      "images": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "273": {
+    "inputs": {
+      "filename_prefix": "unity2",
+      "images": [
+        "276",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "276": {
+    "inputs": {
+      "transparency": true,
+      "model": "u2net",
+      "post_processing": false,
+      "only_mask": false,
+      "alpha_matting": false,
+      "alpha_matting_foreground_threshold": 240,
+      "alpha_matting_background_threshold": 5,
+      "alpha_matting_erode_size": 10,
+      "background_color": "none",
+      "images": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "Image Rembg (Remove Background)",
+    "_meta": {
+      "title": "Image Rembg (Remove Background)"
+    }
+  }
+}

@@ -1,0 +1,1081 @@
+## ComfyUI-Manager: installing dependencies done.
+[2024-05-31 15:05] ** ComfyUI startup time: 2024-05-31 15:05:24.275325
+[2024-05-31 15:05] ** Platform: Windows
+[2024-05-31 15:05] ** Python version: 3.9.18 (main, Sep 11 2023, 14:09:26) [MSC v.1916 64 bit (AMD64)]
+[2024-05-31 15:05] ** Python executable: C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\python.exe
+[2024-05-31 15:05] ** Log path: F:\ComfyUI\comfyui.log
+[2024-05-31 15:05] 
+Prestartup times for custom nodes:
+[2024-05-31 15:05]    0.7 seconds: F:\ComfyUI\custom_nodes\ComfyUI-Manager
+[2024-05-31 15:05] 
+Total VRAM 10240 MB, total RAM 65418 MB
+[2024-05-31 15:05] Set vram state to: NORMAL_VRAM
+[2024-05-31 15:05] Device: cuda:0 NVIDIA GeForce RTX 3080 : cudaMallocAsync
+[2024-05-31 15:05] VAE dtype: torch.bfloat16
+[2024-05-31 15:05] Using pytorch cross attention
+[2024-05-31 15:05] Error:
+[WinError 1314] 客户端没有所需的特权。: 'F:\\ComfyUI\\custom_nodes\\ComfyLiterals\\js' -> 'F:\\ComfyUI\\web\\extensions\\ComfyLiterals'
+Failed to create symlink to F:\ComfyUI\web\extensions\ComfyLiterals. Please copy the folder manually.
+Source: F:\ComfyUI\custom_nodes\ComfyLiterals\js
+Target: F:\ComfyUI\web\extensions\ComfyLiterals
+[2024-05-31 15:05] [AnimateDiff] - [0;31mERROR[0m - No models available. Please download one and put it in models folder
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:249: FutureWarning: `AutoencoderTinyBlock` is deprecated and will be removed in version 0.29. Importing `AutoencoderTinyBlock` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AutoencoderTinyBlock`, instead.
+  deprecate("AutoencoderTinyBlock", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:254: FutureWarning: `UNetMidBlock2D` is deprecated and will be removed in version 0.29. Importing `UNetMidBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import UNetMidBlock2D`, instead.
+  deprecate("UNetMidBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:259: FutureWarning: `UNetMidBlock2DCrossAttn` is deprecated and will be removed in version 0.29. Importing `UNetMidBlock2DCrossAttn` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import UNetMidBlock2DCrossAttn`, instead.
+  deprecate("UNetMidBlock2DCrossAttn", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:264: FutureWarning: `UNetMidBlock2DSimpleCrossAttn` is deprecated and will be removed in version 0.29. Importing `UNetMidBlock2DSimpleCrossAttn` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import UNetMidBlock2DSimpleCrossAttn`, instead.
+  deprecate("UNetMidBlock2DSimpleCrossAttn", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:269: FutureWarning: `AttnDownBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnDownBlock2D`, instead.
+  deprecate("AttnDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:274: FutureWarning: `CrossAttnDownBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import CrossAttnDownBlock2D`, instead.
+  deprecate("CrossAttnDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:279: FutureWarning: `DownBlock2D` is deprecated and will be removed in version 0.29. Importing `DownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import DownBlock2D`, instead.
+  deprecate("DownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:284: FutureWarning: `AttnDownEncoderBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnDownEncoderBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnDownEncoderBlock2D`, instead.
+  deprecate("AttnDownEncoderBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:289: FutureWarning: `AttnSkipDownBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnSkipDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnSkipDownBlock2D`, instead.
+  deprecate("AttnSkipDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:294: FutureWarning: `SkipDownBlock2D` is deprecated and will be removed in version 0.29. Importing `SkipDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import SkipDownBlock2D`, instead.
+  deprecate("SkipDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:299: FutureWarning: `ResnetDownsampleBlock2D` is deprecated and will be removed in version 0.29. Importing `ResnetDownsampleBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import ResnetDownsampleBlock2D`, instead.
+  deprecate("ResnetDownsampleBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:304: FutureWarning: `SimpleCrossAttnDownBlock2D` is deprecated and will be removed in version 0.29. Importing `SimpleCrossAttnDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import SimpleCrossAttnDownBlock2D`, instead.
+  deprecate("SimpleCrossAttnDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:309: FutureWarning: `KDownBlock2D` is deprecated and will be removed in version 0.29. Importing `KDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import KDownBlock2D`, instead.
+  deprecate("KDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:314: FutureWarning: `KCrossAttnDownBlock2D` is deprecated and will be removed in version 0.29. Importing `KCrossAttnDownBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import KCrossAttnDownBlock2D`, instead.
+  deprecate("KCrossAttnDownBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:319: FutureWarning: `AttnUpBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnUpBlock2D`, instead.
+  deprecate("AttnUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:324: FutureWarning: `CrossAttnUpBlock2D` is deprecated and will be removed in version 0.29. Importing `CrossAttnUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import CrossAttnUpBlock2D`, instead.
+  deprecate("CrossAttnUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:329: FutureWarning: `UpBlock2D` is deprecated and will be removed in version 0.29. Importing `UpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import UpBlock2D`, instead.
+  deprecate("UpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:334: FutureWarning: `UpDecoderBlock2D` is deprecated and will be removed in version 0.29. Importing `UpDecoderBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import UpDecoderBlock2D`, instead.
+  deprecate("UpDecoderBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:339: FutureWarning: `AttnUpDecoderBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnUpDecoderBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnUpDecoderBlock2D`, instead.
+  deprecate("AttnUpDecoderBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:344: FutureWarning: `AttnSkipUpBlock2D` is deprecated and will be removed in version 0.29. Importing `AttnSkipUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import AttnSkipUpBlock2D`, instead.
+  deprecate("AttnSkipUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:349: FutureWarning: `SkipUpBlock2D` is deprecated and will be removed in version 0.29. Importing `SkipUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import SkipUpBlock2D`, instead.
+  deprecate("SkipUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:354: FutureWarning: `ResnetUpsampleBlock2D` is deprecated and will be removed in version 0.29. Importing `ResnetUpsampleBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import ResnetUpsampleBlock2D`, instead.
+  deprecate("ResnetUpsampleBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:359: FutureWarning: `SimpleCrossAttnUpBlock2D` is deprecated and will be removed in version 0.29. Importing `SimpleCrossAttnUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import SimpleCrossAttnUpBlock2D`, instead.
+  deprecate("SimpleCrossAttnUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:364: FutureWarning: `KUpBlock2D` is deprecated and will be removed in version 0.29. Importing `KUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import KUpBlock2D`, instead.
+  deprecate("KUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:369: FutureWarning: `KCrossAttnUpBlock2D` is deprecated and will be removed in version 0.29. Importing `KCrossAttnUpBlock2D` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import KCrossAttnUpBlock2D`, instead.
+  deprecate("KCrossAttnUpBlock2D", "0.29", deprecation_message)
+[2024-05-31 15:05] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\diffusers\models\unet_2d_blocks.py:375: FutureWarning: `KAttentionBlock` is deprecated and will be removed in version 0.29. Importing `KAttentionBlock` from `diffusers.models.unet_2d_blocks` is deprecated and this will be removed in a future version. Please use `from diffusers.models.unets.unet_2d_blocks import KAttentionBlock`, instead.
+  deprecate("KAttentionBlock", "0.29", deprecation_message)
+[2024-05-31 15:05] ### Loading: ComfyUI-Manager (V2.27)
+[2024-05-31 15:05] ### ComfyUI Revision: 2166 [c3341228] | Released on '2024-05-07'
+[2024-05-31 15:05] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-31 15:05] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-31 15:05] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-31 15:05] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-31 15:05] (pysssss:WD14Tagger) [DEBUG] Available ORT providers: TensorrtExecutionProvider, CUDAExecutionProvider, CPUExecutionProvider
+[2024-05-31 15:05] (pysssss:WD14Tagger) [DEBUG] Using ORT providers: CUDAExecutionProvider, CPUExecutionProvider
+[2024-05-31 15:05] (pysssss:WD14Tagger) [DEBUG] Available ORT providers: TensorrtExecutionProvider, CUDAExecutionProvider, CPUExecutionProvider
+[2024-05-31 15:05] (pysssss:WD14Tagger) [DEBUG] Using ORT providers: CUDAExecutionProvider, CPUExecutionProvider
+[2024-05-31 15:05] ------------------------------------------
+[2024-05-31 15:05] [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+[2024-05-31 15:05] ------------------------------------------
+[2024-05-31 15:05] ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+[2024-05-31 15:05] ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+[2024-05-31 15:05] ------------------------------------------
+[2024-05-31 15:05] [36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts[0m
+[2024-05-31 15:05] [36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[2024-05-31 15:05] [36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+[2024-05-31 15:05] DWPose: Onnxruntime with acceleration providers detected
+[2024-05-31 15:05] Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2024-05-31 15:05] NumExpr defaulting to 8 threads.
+[2024-05-31 15:05] [34mFizzleDorf Custom Nodes: [92mLoaded[0m
+[2024-05-31 15:05] Exception ignored in: <function _ProactorBasePipeTransport.__del__ at 0x000002608C7004C0>
+[2024-05-31 15:05] Traceback (most recent call last):
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\proactor_events.py", line 116, in __del__
+[2024-05-31 15:05]     self.close()
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\proactor_events.py", line 108, in close
+[2024-05-31 15:05]     self._loop.call_soon(self._call_connection_lost, None)
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\base_events.py", line 751, in call_soon
+[2024-05-31 15:05]     self._check_closed()
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\base_events.py", line 515, in _check_closed
+[2024-05-31 15:05]     raise RuntimeError('Event loop is closed')
+[2024-05-31 15:05] RuntimeError: Event loop is closed
+[2024-05-31 15:05] Exception ignored in: <function _ProactorBasePipeTransport.__del__ at 0x000002608C7004C0>
+[2024-05-31 15:05] Traceback (most recent call last):
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\proactor_events.py", line 116, in __del__
+[2024-05-31 15:05]     self.close()
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\proactor_events.py", line 108, in close
+[2024-05-31 15:05]     self._loop.call_soon(self._call_connection_lost, None)
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\base_events.py", line 751, in call_soon
+[2024-05-31 15:05]     self._check_closed()
+[2024-05-31 15:05]   File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\base_events.py", line 515, in _check_closed
+[2024-05-31 15:05]     raise RuntimeError('Event loop is closed')
+[2024-05-31 15:05] RuntimeError: Event loop is closed
+[2024-05-31 15:05] Traceback (most recent call last):
+  File "f:\ComfyUI\nodes.py", line 1876, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes\__init__.py", line 8, in <module>
+    from .pyscripts.Nodes.Custom import Types as TypeNodes
+  File "F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes\pyscripts\Nodes\Custom\Types.py", line 1, in <module>
+    from ...components.fields import Field
+  File "F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes\pyscripts\components\fields.py", line 12, in <module>
+    class Field:
+  File "F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes\pyscripts\components\fields.py", line 14, in Field
+    def field(field: str | list, data: dict = None) -> tuple[str | list, dict] | tuple[str | list]:
+TypeError: unsupported operand type(s) for |: 'type' and 'type'
+
+[2024-05-31 15:05] Cannot import F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes module for custom nodes: unsupported operand type(s) for |: 'type' and 'type'
+[2024-05-31 15:05] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[2024-05-31 15:05] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-31 15:05] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `F:\ComfyUI\custom_nodes\was-node-suite-comfyui\was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-31 15:05] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m211[0m [32mnodes successfully.[0m
+[2024-05-31 15:05] 
+	[3m[93m"The best way to predict the future is to create it."[0m[3m - Peter Drucker[0m
+[2024-05-31 15:05] 
+[2024-05-31 15:05] 
+Import times for custom nodes:
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\websocket_image_save.py
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\rembg-comfyui-node-better
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\ComfyLiterals
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\ComfyUI-WD14-Tagger-Cache
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\rembg-comfyui-node
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\ComfyUI-Logic
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\cg-use-everywhere
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\ComfyUI-WD14-Tagger
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\comfyui-animatediff
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\ComfyUI_UltimateSDUpscale
+[2024-05-31 15:05]    0.0 seconds: F:\ComfyUI\custom_nodes\comfy-image-saver
+[2024-05-31 15:05]    0.0 seconds (IMPORT FAILED): F:\ComfyUI\custom_nodes\Derfuu_ComfyUI_ModdedNodes
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\ComfyUI-Advanced-ControlNet
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\ComfyUI-Frame-Interpolation
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\efficiency-nodes-comfyui
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\ComfyUI_essentials
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\comfyui-various
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\OneButtonPrompt
+[2024-05-31 15:05]    0.1 seconds: F:\ComfyUI\custom_nodes\ComfyUI-AnimateDiff-Evolved
+[2024-05-31 15:05]    0.2 seconds: F:\ComfyUI\custom_nodes\comfyui_controlnet_aux
+[2024-05-31 15:05]    0.4 seconds: F:\ComfyUI\custom_nodes\ComfyUI-layerdiffuse
+[2024-05-31 15:05]    0.4 seconds: F:\ComfyUI\custom_nodes\ComfyUI-Manager
+[2024-05-31 15:05]    0.7 seconds: F:\ComfyUI\custom_nodes\ComfyUI_Comfyroll_CustomNodes
+[2024-05-31 15:05]    1.0 seconds: F:\ComfyUI\custom_nodes\comfyui_segment_anything
+[2024-05-31 15:05]    1.4 seconds: F:\ComfyUI\custom_nodes\ComfyUI-VideoHelperSuite
+[2024-05-31 15:05]    1.7 seconds: F:\ComfyUI\custom_nodes\ComfyUI_FizzNodes
+[2024-05-31 15:05]    1.8 seconds: F:\ComfyUI\custom_nodes\luamoon
+[2024-05-31 15:05]    2.1 seconds: F:\ComfyUI\custom_nodes\batchImg-rembg-ComfyUI-nodes
+[2024-05-31 15:05]    4.3 seconds: F:\ComfyUI\custom_nodes\was-node-suite-comfyui
+[2024-05-31 15:05] 
+[2024-05-31 15:05] Starting server
+
+[2024-05-31 15:05] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-31 15:12] got prompt
+[2024-05-31 15:12] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 15:12] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:12] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, brown hair, big eyes, headphones, plaid dress, lace blouse, bow tie, frills, sitting, indoor, japanese, gothic lolita fashion, cosplay, selfie, young adult, makeup, bangs, accessories 
+c = [0m
+[2024-05-31 15:12] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, brown hair, big eyes, headphones, plaid dress, lace blouse, bow tie, frills, sitting, indoor, japanese, gothic lolita fashion, cosplay, selfie, young adult, makeup, bangs, accessories[0m
+[2024-05-31 15:12] model_type EPS
+[2024-05-31 15:12] Using pytorch attention in VAE
+[2024-05-31 15:12] Using pytorch attention in VAE
+[2024-05-31 15:12] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 15:12] Requested to load SD1ClipModel
+[2024-05-31 15:12] Loading 1 new model
+[2024-05-31 15:12] C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\PIL\Image.py:992: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+[2024-05-31 15:12] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 15:12] F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\src\controlnet_aux\pidi\model.py:334: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:85.)
+  buffer = torch.cuda.FloatTensor(shape[0], shape[1], 5 * 5).fill_(0)
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 15:13] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 15:13] Requested to load AutoencoderKL
+[2024-05-31 15:13] Loading 1 new model
+[2024-05-31 15:13] Requested to load ControlNet
+[2024-05-31 15:13] Requested to load ControlNet
+[2024-05-31 15:13] Requested to load BaseModel
+[2024-05-31 15:13] Requested to load ControlNet
+[2024-05-31 15:13] Loading 4 new models
+[2024-05-31 15:13] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:04<00:00,  4.49it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:04<00:00,  4.16it/s]
+[2024-05-31 15:13] Prompt executed in 99.11 seconds
+[2024-05-31 15:29] got prompt
+[2024-05-31 15:29] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 15:29] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:29] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, black hair, bangs, lace blouse, plaid dress, large bow tie, headset, headphones, seated, indoor, lace sleeves, looking at camera, Asian, partial smile, fringe, straight hair, selfie, white blouse, frilled collar, streaming chair, streamer 
+c = [0m
+[2024-05-31 15:29] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, black hair, bangs, lace blouse, plaid dress, large bow tie, headset, headphones, seated, indoor, lace sleeves, looking at camera, Asian, partial smile, fringe, straight hair, selfie, white blouse, frilled collar, streaming chair, streamer[0m
+[2024-05-31 15:29] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.88it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.97it/s]
+[2024-05-31 15:29] Prompt executed in 16.03 seconds
+[2024-05-31 15:34] got prompt
+[2024-05-31 15:34] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 15:34] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:34] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, dark hair, bangs, large eyes, bow, black and white checkered dress, lace blouse, headphones, selfie, sitting, background chair, young, holding strand of hair, detailed makeup, indoors, blouse with intricate pattern, room setting 
+c = [0m
+[2024-05-31 15:34] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, dark hair, bangs, large eyes, bow, black and white checkered dress, lace blouse, headphones, selfie, sitting, background chair, young, holding strand of hair, detailed makeup, indoors, blouse with intricate pattern, room setting[0m
+[2024-05-31 15:34] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.86it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.91it/s]
+[2024-05-31 15:34] Prompt executed in 14.59 seconds
+[2024-05-31 15:35] got prompt
+[2024-05-31 15:36] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 15:36] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:36] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long brown hair, bangs, headset, black and white checkered dress, white lace blouse, indoors, large bow, selfie, headphones, cute, youthful, looking at camera, makeup, pink lips, brown eyes, professional chair, black hair accessory, kawaii, feminine, delicate features, streamer 
+c = [0m
+[2024-05-31 15:36] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long brown hair, bangs, headset, black and white checkered dress, white lace blouse, indoors, large bow, selfie, headphones, cute, youthful, looking at camera, makeup, pink lips, brown eyes, professional chair, black hair accessory, kawaii, feminine, delicate features, streamer[0m
+[2024-05-31 15:36] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.07it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.03it/s]
+[2024-05-31 15:36] Prompt executed in 10.67 seconds
+[2024-05-31 15:39] got prompt
+[2024-05-31 15:39] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 15:39] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:39] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, brown hair, bangs, headphones, white blouse, black and white plaid dress, bow tie, self-portrait, indoors, gaming chair, lace sleeves, white collar, decorative brooch, makeup, youthful, cute, straight hair, light skin, round eyes, hand in hair, delicate features, pointed chin, embroidered cushion 
+c = [0m
+[2024-05-31 15:39] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, brown hair, bangs, headphones, white blouse, black and white plaid dress, bow tie, self-portrait, indoors, gaming chair, lace sleeves, white collar, decorative brooch, makeup, youthful, cute, straight hair, light skin, round eyes, hand in hair, delicate features, pointed chin, embroidered cushion[0m
+[2024-05-31 15:39] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.04it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.08it/s]
+[2024-05-31 15:39] Prompt executed in 10.59 seconds
+[2024-05-31 15:40] got prompt
+[2024-05-31 15:40] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 15:40] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:40] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon character, orange face, black outfit, white shirt, gray hair, standing, simple design, digital illustration, comic style, vector graphic, holding basketball, round face, hands in pockets. 
+c = [0m
+[2024-05-31 15:40] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon character, orange face, black outfit, white shirt, gray hair, standing, simple design, digital illustration, comic style, vector graphic, holding basketball, round face, hands in pockets.[0m
+[2024-05-31 15:40] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.51it/s]
+[2024-05-31 15:40] Prompt executed in 9.98 seconds
+[2024-05-31 15:41] got prompt
+[2024-05-31 15:41] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 15:41] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:41] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, cartoon, character, vector graphic, design software interface, screen capture, drawing tool, workspace, unfinished work, panel settings, dimensions, progress, geometric shapes, outlines, simple colors, black and white attire, suspenders, bird-like figure, grey hair, facial expression, arm gesture, circular shapes 
+c = [0m
+[2024-05-31 15:41] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, cartoon, character, vector graphic, design software interface, screen capture, drawing tool, workspace, unfinished work, panel settings, dimensions, progress, geometric shapes, outlines, simple colors, black and white attire, suspenders, bird-like figure, grey hair, facial expression, arm gesture, circular shapes[0m
+[2024-05-31 15:41] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.26it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.23it/s]
+[2024-05-31 15:41] Prompt executed in 9.86 seconds
+[2024-05-31 15:43] got prompt
+[2024-05-31 15:43] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 15:43] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:43] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, character, cartoon, grey hair, orange face, black and white outfit, standing, holding, object, arm raised, simple design, no background, digital drawing, flat colors, digital art interface, computer screen, toolbar, measurement tool, Adobe Illustrator. 
+c = [0m
+[2024-05-31 15:43] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, character, cartoon, grey hair, orange face, black and white outfit, standing, holding, object, arm raised, simple design, no background, digital drawing, flat colors, digital art interface, computer screen, toolbar, measurement tool, Adobe Illustrator.[0m
+[2024-05-31 15:43] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.38it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.24it/s]
+[2024-05-31 15:43] Prompt executed in 9.67 seconds
+[2024-05-31 15:57] got prompt
+[2024-05-31 15:57] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 15:57] 
+[91mEvaluate Strings:[0m
+[2024-05-31 15:57] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon character, orange skin, gray hair, black suit, white shirt, tie, holding basketball, illustration, digital art, graphic design, torso view, smiling face, round head, large eyes, vector art, Adobe Illustrator, measurement on screen, tool palette, software interface, work in progress, flat design 
+c = [0m
+[2024-05-31 15:57] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon character, orange skin, gray hair, black suit, white shirt, tie, holding basketball, illustration, digital art, graphic design, torso view, smiling face, round head, large eyes, vector art, Adobe Illustrator, measurement on screen, tool palette, software interface, work in progress, flat design[0m
+[2024-05-31 15:57] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.46it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.39it/s]
+[2024-05-31 15:57] Prompt executed in 12.05 seconds
+[2024-05-31 16:02] got prompt
+[2024-05-31 16:02] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 16:02] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:02] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, Asian, long brown hair, headset, black and white checkered dress, large bow tie, white lace blouse, streaming setup, armchair, close-up, indoors, straight hair, young adult, serious expression 
+c = [0m
+[2024-05-31 16:02] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, Asian, long brown hair, headset, black and white checkered dress, large bow tie, white lace blouse, streaming setup, armchair, close-up, indoors, straight hair, young adult, serious expression[0m
+[2024-05-31 16:02] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.38it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.35it/s]
+[2024-05-31 16:02] Prompt executed in 12.33 seconds
+[2024-05-31 16:02] got prompt
+[2024-05-31 16:02] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 16:02] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:02] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon character, person, gray hair, orange skin, black suit, tie, simple drawing, Illustrator, windows software, measurement tool, design interface, screen capture, digital illustration, tools and options panel 
+c = [0m
+[2024-05-31 16:02] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon character, person, gray hair, orange skin, black suit, tie, simple drawing, Illustrator, windows software, measurement tool, design interface, screen capture, digital illustration, tools and options panel[0m
+[2024-05-31 16:03] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.92it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.36it/s]
+[2024-05-31 16:03] Prompt executed in 10.96 seconds
+[2024-05-31 16:04] got prompt
+[2024-05-31 16:04] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 16:04] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:04] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon character, illustration, short gray hair, stylized person, orange skin tone, white shirt, black suspenders, black pants, simple design, bow tie, holding a basketball, digital design, vector graphics, editing workspace, language settings, measurement tool, color adjustment panel, white background. 
+c = [0m
+[2024-05-31 16:04] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon character, illustration, short gray hair, stylized person, orange skin tone, white shirt, black suspenders, black pants, simple design, bow tie, holding a basketball, digital design, vector graphics, editing workspace, language settings, measurement tool, color adjustment panel, white background.[0m
+[2024-05-31 16:05] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.53it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.54it/s]
+[2024-05-31 16:05] Prompt executed in 44.47 seconds
+[2024-05-31 16:05] got prompt
+[2024-05-31 16:06] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 16:06] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:06] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,vector illustration, character illustration, digital illustration, cartoon character, anthropomorphic character, simplified figure, smiling face, gray hair, orange face, suspenders, lab coat, black trousers, round eyes, circular body, software interface, design software, Adobe Illustrator, measurement tool, gradient tool, Chinese language setting, toolbar, digital art, graphic design, editing workspace, comic style. 
+c = [0m
+[2024-05-31 16:06] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,vector illustration, character illustration, digital illustration, cartoon character, anthropomorphic character, simplified figure, smiling face, gray hair, orange face, suspenders, lab coat, black trousers, round eyes, circular body, software interface, design software, Adobe Illustrator, measurement tool, gradient tool, Chinese language setting, toolbar, digital art, graphic design, editing workspace, comic style.[0m
+[2024-05-31 16:06] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.48it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.43it/s]
+[2024-05-31 16:06] Prompt executed in 30.35 seconds
+[2024-05-31 16:07] got prompt
+[2024-05-31 16:07] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 16:07] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:07] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, vector graphic, humanoid figure, gray hair, orange face, round eyes, black suit, white shirt, green tie, holding basketball, standing pose, neutral expression, software interface, color adjustment tool, measurement tool, design software, GUI, digital art, simplified character, abstract figure 
+c = [0m
+[2024-05-31 16:07] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, vector graphic, humanoid figure, gray hair, orange face, round eyes, black suit, white shirt, green tie, holding basketball, standing pose, neutral expression, software interface, color adjustment tool, measurement tool, design software, GUI, digital art, simplified character, abstract figure[0m
+[2024-05-31 16:07] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.38it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.41it/s]
+[2024-05-31 16:07] Prompt executed in 19.71 seconds
+[2024-05-31 16:08] got prompt
+[2024-05-31 16:08] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 16:08] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:08] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,female, young adult, long hair, brown hair, bangs, big eyes, bow, plaid dress, headphones, lace sleeve, white shirt, streamer, selfie, close-up, indoors, seated, casual, holding hair, necklace, focused, chair. 
+c = [0m
+[2024-05-31 16:08] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,female, young adult, long hair, brown hair, bangs, big eyes, bow, plaid dress, headphones, lace sleeve, white shirt, streamer, selfie, close-up, indoors, seated, casual, holding hair, necklace, focused, chair.[0m
+[2024-05-31 16:08] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.25it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.30it/s]
+[2024-05-31 16:08] Prompt executed in 9.72 seconds
+[2024-05-31 16:10] got prompt
+[2024-05-31 16:10] 1girl, solo, short_hair, blue_eyes, simple_background, thighhighs, gloves, hat, white_background, holding, monochrome, white_hair, fingerless_gloves, grey_background, cape, standing_on_one_leg, staff, blue_headwear
+[2024-05-31 16:10] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:10] [90ma = 1girl, solo, short_hair, blue_eyes, simple_background, thighhighs, gloves, hat, white_background, holding, monochrome, white_hair, fingerless_gloves, grey_background, cape, standing_on_one_leg, staff, blue_headwear 
+b = (masterpiece, best quality),AFK,,female character, 3D model, winter attire, blue and white outfit, holding staff, short hair, hat, knee-high socks, boots, dynamic pose, cape, digital art, fantasy setting, medieval style, weapon, young, smiling facial expression 
+c = [0m
+[2024-05-31 16:10] a + b + c = [92m1girl, solo, short_hair, blue_eyes, simple_background, thighhighs, gloves, hat, white_background, holding, monochrome, white_hair, fingerless_gloves, grey_background, cape, standing_on_one_leg, staff, blue_headwear(masterpiece, best quality),AFK,,female character, 3D model, winter attire, blue and white outfit, holding staff, short hair, hat, knee-high socks, boots, dynamic pose, cape, digital art, fantasy setting, medieval style, weapon, young, smiling facial expression[0m
+[2024-05-31 16:10] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.41it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.02it/s]
+[2024-05-31 16:10] Prompt executed in 9.63 seconds
+[2024-05-31 16:12] got prompt
+[2024-05-31 16:12] Failed to validate prompt for output 130:
+[2024-05-31 16:12] * Image Remove Background (rembg) 129:
+[2024-05-31 16:12]   - Required input is missing: model_name
+[2024-05-31 16:12] Output will be ignored
+[2024-05-31 16:12] 
+[2024-05-31 16:12] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:12] [90ma =  
+b = prompt 
+c = [0m
+[2024-05-31 16:12] a + b + c = [92mprompt[0m
+[2024-05-31 16:12] model_type EPS
+[2024-05-31 16:14] Using pytorch attention in VAE
+[2024-05-31 16:14] Using pytorch attention in VAE
+[2024-05-31 16:15] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 16:15] Requested to load SDXLClipModel
+[2024-05-31 16:15] Loading 1 new model
+[2024-05-31 16:17] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 16:18] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 16:18] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 16:18] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 16:21] Failed to find F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\res101.pth.
+ Downloading from huggingface.co
+[2024-05-31 16:21] cacher folder is C:\Users\liuwei\AppData\Local\Temp, you can change it by custom_tmp_path in config.yaml
+[2024-05-31 16:25] res101.pth: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 531M/531M [04:48<00:00, 1.85MB/s]res101.pth: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 531M/531M [04:48<00:00, 1.84MB/s]
+[2024-05-31 16:25] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\res101.pth
+[2024-05-31 16:25] Failed to find F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\latest_net_G.pth.
+ Downloading from huggingface.co
+[2024-05-31 16:25] cacher folder is C:\Users\liuwei\AppData\Local\Temp, you can change it by custom_tmp_path in config.yaml
+[2024-05-31 16:25] !!! Exception during processing!!! An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+[2024-05-31 16:25] Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1275, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1133, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1275, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1133, in read
+    return self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 1238, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 1631, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 385, in _request_wrapper
+    response = _request_wrapper(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 408, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\utils\_http.py", line 67, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: (ProtocolError('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)), '(Request ID: 5168a751-439b-4047-a189-b03ea3a92419)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "f:\ComfyUI\execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "f:\ComfyUI\execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "f:\ComfyUI\execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\node_wrappers\leres.py", line 21, in execute
+    model = LeresDetector.from_pretrained().to(model_management.get_torch_device())
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\src\controlnet_aux\leres\__init__.py", line 30, in from_pretrained
+    pix2pix_model_path = custom_hf_download(pretrained_model_or_path, pix2pix_filename)
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\src\controlnet_aux\util.py", line 322, in custom_hf_download
+    model_path = hf_hub_download(repo_id=pretrained_model_or_path,
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 1371, in hf_hub_download
+    raise LocalEntryNotFoundError(
+huggingface_hub.utils._errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+[2024-05-31 16:25] Prompt executed in 822.50 seconds
+[2024-05-31 16:27] got prompt
+[2024-05-31 16:27] 1girl, solo, long_hair, looking_at_viewer, shirt, black_hair, sitting, flower, short_sleeves, outdoors, shorts, day, black_eyes, headphones, crossed_arms, plant, freckles
+[2024-05-31 16:27] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:27] [90ma = 1girl, solo, long_hair, looking_at_viewer, shirt, black_hair, sitting, flower, short_sleeves, outdoors, shorts, day, black_eyes, headphones, crossed_arms, plant, freckles 
+b = (masterpiece, best quality),AFK,,young woman, anime style, futuristic headphones, outdoors, leather shorts, crossbody strap, arm sleeves, seated postures, detailed background, garden, flowers, greenery, house, sunlight, large eyes, long hair, white shirt, orange outfit, relaxed expression, gloves, detailed illustration, 3D-like rendering 
+c = [0m
+[2024-05-31 16:27] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, shirt, black_hair, sitting, flower, short_sleeves, outdoors, shorts, day, black_eyes, headphones, crossed_arms, plant, freckles(masterpiece, best quality),AFK,,young woman, anime style, futuristic headphones, outdoors, leather shorts, crossbody strap, arm sleeves, seated postures, detailed background, garden, flowers, greenery, house, sunlight, large eyes, long hair, white shirt, orange outfit, relaxed expression, gloves, detailed illustration, 3D-like rendering[0m
+[2024-05-31 16:27] model_type EPS
+[2024-05-31 16:27] Using pytorch attention in VAE
+[2024-05-31 16:27] Using pytorch attention in VAE
+[2024-05-31 16:27] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 16:27] Requested to load SD1ClipModel
+[2024-05-31 16:27] Loading 1 new model
+[2024-05-31 16:27] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 16:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 16:28] Requested to load AutoencoderKL
+[2024-05-31 16:28] Loading 1 new model
+[2024-05-31 16:28] Requested to load BaseModel
+[2024-05-31 16:28] Loading 1 new model
+[2024-05-31 16:28] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.97it/s]
+[2024-05-31 16:28] Prompt executed in 87.52 seconds
+[2024-05-31 16:32] got prompt
+[2024-05-31 16:32] 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress
+[2024-05-31 16:32] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:32] [90ma = 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress 
+b = (masterpiece, best quality),AFK,,woman, long hair, bangs, young adult, female, Asian, white dress, lace, bow, hair accessory, sitting, peace sign, smile, indoors, close-up, cosplay, frills, makeup, couch, light background, portrait, waist-up, brown hair, serene expression 
+c = [0m
+[2024-05-31 16:32] a + b + c = [92m1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress(masterpiece, best quality),AFK,,woman, long hair, bangs, young adult, female, Asian, white dress, lace, bow, hair accessory, sitting, peace sign, smile, indoors, close-up, cosplay, frills, makeup, couch, light background, portrait, waist-up, brown hair, serene expression[0m
+[2024-05-31 16:32] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.11it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.08it/s]
+[2024-05-31 16:32] Prompt executed in 11.51 seconds
+[2024-05-31 16:33] got prompt
+[2024-05-31 16:33] 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress
+[2024-05-31 16:33] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:33] [90ma = 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress 
+b = (masterpiece, best quality),AFK,,woman, brown hair, long hair, posing, peace sign, white dress, lace dress, bows, sitting on sofa, closed eyes, smiling, white gloves, indoor, Asian, floral choker, makeup, youthful, soft expression, ribbon accessories. 
+c = [0m
+[2024-05-31 16:33] a + b + c = [92m1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress(masterpiece, best quality),AFK,,woman, brown hair, long hair, posing, peace sign, white dress, lace dress, bows, sitting on sofa, closed eyes, smiling, white gloves, indoor, Asian, floral choker, makeup, youthful, soft expression, ribbon accessories.[0m
+[2024-05-31 16:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.24it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.20it/s]
+[2024-05-31 16:33] Prompt executed in 9.54 seconds
+[2024-05-31 16:33] got prompt
+[2024-05-31 16:33] 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress
+[2024-05-31 16:33] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:33] [90ma = 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress 
+b = (masterpiece, best quality),AFK,,Female, young woman, long hair, brown hair, bangs, white dress, lace, ribbons, sitting, peace sign, indoor, daytime, accessories, bow hairpin, flower choker, bed, ornate sleeves, Asian, relaxed pose, kawaii, cosplay elements, smiling, soft lighting, decorative pillows, modern setting, wall outlet. 
+c = [0m
+[2024-05-31 16:33] a + b + c = [92m1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress(masterpiece, best quality),AFK,,Female, young woman, long hair, brown hair, bangs, white dress, lace, ribbons, sitting, peace sign, indoor, daytime, accessories, bow hairpin, flower choker, bed, ornate sleeves, Asian, relaxed pose, kawaii, cosplay elements, smiling, soft lighting, decorative pillows, modern setting, wall outlet.[0m
+[2024-05-31 16:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.33it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.31it/s]
+[2024-05-31 16:33] Prompt executed in 9.44 seconds
+[2024-05-31 16:38] got prompt
+[2024-05-31 16:38] 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress
+[2024-05-31 16:38] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:38] [90ma = 1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress 
+b = (masterpiece, best quality),AFK,,woman, long hair, white dress, lace, bow, ribbon, peace sign, closed eyes, indoor, sitting, smiling, Asian, cosplay, feminine, delicate, elegant, young adult, anime style, frills, ruffles, gloves, hair accessories, bedroom setting 
+c = [0m
+[2024-05-31 16:38] a + b + c = [92m1girl, solo, long_hair, smile, bangs, black_hair, dress, bow, sitting, closed_mouth, closed_eyes, hair_bow, sleeveless, indoors, white_dress, lips, v, lace, realistic, clock, lace-trimmed_dress(masterpiece, best quality),AFK,,woman, long hair, white dress, lace, bow, ribbon, peace sign, closed eyes, indoor, sitting, smiling, Asian, cosplay, feminine, delicate, elegant, young adult, anime style, frills, ruffles, gloves, hair accessories, bedroom setting[0m
+[2024-05-31 16:38] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.04it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 11.08it/s]
+[2024-05-31 16:38] Prompt executed in 9.58 seconds
+[2024-05-31 16:39] got prompt
+[2024-05-31 16:39] 1girl, solo, breasts, looking_at_viewer, short_hair, bangs, blue_eyes, gloves, dress, jewelry, closed_mouth, blue_hair, standing, grey_hair, cowboy_shot, earrings, hand_up, hand_on_hip, blue_dress
+[2024-05-31 16:39] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:39] [90ma = 1girl, solo, breasts, looking_at_viewer, short_hair, bangs, blue_eyes, gloves, dress, jewelry, closed_mouth, blue_hair, standing, grey_hair, cowboy_shot, earrings, hand_up, hand_on_hip, blue_dress 
+b = (masterpiece, best quality),AFK,,female, white hair, blue eyes, short hair, blue dress, high collar, gold and blue armor, fantasy character, ornate background, hand on chin, standing, elegant pose, confident expression, earrings, shoulder armor, thigh-high boots, detailed design, 3D illustration, full body portrait, fair skin, indoor setting 
+c = [0m
+[2024-05-31 16:39] a + b + c = [92m1girl, solo, breasts, looking_at_viewer, short_hair, bangs, blue_eyes, gloves, dress, jewelry, closed_mouth, blue_hair, standing, grey_hair, cowboy_shot, earrings, hand_up, hand_on_hip, blue_dress(masterpiece, best quality),AFK,,female, white hair, blue eyes, short hair, blue dress, high collar, gold and blue armor, fantasy character, ornate background, hand on chin, standing, elegant pose, confident expression, earrings, shoulder armor, thigh-high boots, detailed design, 3D illustration, full body portrait, fair skin, indoor setting[0m
+[2024-05-31 16:39] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.89it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.77it/s]
+[2024-05-31 16:39] Prompt executed in 9.83 seconds
+[2024-05-31 16:41] got prompt
+[2024-05-31 16:41] flower, outdoors, sky, cloud, tree, no_humans, cloudy_sky, grass, scenery, sunset, mountain, sun, sunflower, field, landscape, mountainous_horizon, hill
+[2024-05-31 16:41] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:41] [90ma = flower, outdoors, sky, cloud, tree, no_humans, cloudy_sky, grass, scenery, sunset, mountain, sun, sunflower, field, landscape, mountainous_horizon, hill 
+b = (masterpiece, best quality),AFK,,landscape, countryside, hills, valley, church, dome, dome building, fields, sunflowers, river, trees, clouds, sunset, sky, vibrant, daisies, shrubs, flowers, water reflections, architectural, scenic, serene, nature, building with dome, meadow, horizon, idyllic, peaceful, plants, grass, rural, day time, sunlight 
+c = [0m
+[2024-05-31 16:41] a + b + c = [92mflower, outdoors, sky, cloud, tree, no_humans, cloudy_sky, grass, scenery, sunset, mountain, sun, sunflower, field, landscape, mountainous_horizon, hill(masterpiece, best quality),AFK,,landscape, countryside, hills, valley, church, dome, dome building, fields, sunflowers, river, trees, clouds, sunset, sky, vibrant, daisies, shrubs, flowers, water reflections, architectural, scenic, serene, nature, building with dome, meadow, horizon, idyllic, peaceful, plants, grass, rural, day time, sunlight[0m
+[2024-05-31 16:41] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.73it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.41it/s]
+[2024-05-31 16:41] Prompt executed in 10.22 seconds
+[2024-05-31 16:42] got prompt
+[2024-05-31 16:42] Failed to validate prompt for output 130:
+[2024-05-31 16:42] * Image Remove Background (rembg) 129:
+[2024-05-31 16:42]   - Required input is missing: model_name
+[2024-05-31 16:42] Output will be ignored
+[2024-05-31 16:42] 
+[2024-05-31 16:42] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:42] [90ma =  
+b = prompt 
+c = [0m
+[2024-05-31 16:42] a + b + c = [92mprompt[0m
+[2024-05-31 16:42] model_type EPS
+[2024-05-31 16:44] Using pytorch attention in VAE
+[2024-05-31 16:44] Using pytorch attention in VAE
+[2024-05-31 16:45] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 16:45] Requested to load SDXLClipModel
+[2024-05-31 16:45] Loading 1 new model
+[2024-05-31 16:47] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 16:47] got prompt
+[2024-05-31 16:49] got prompt
+[2024-05-31 16:49] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 16:49] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 16:49] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 16:51] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\res101.pth
+[2024-05-31 16:51] Failed to find F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\latest_net_G.pth.
+ Downloading from huggingface.co
+[2024-05-31 16:51] cacher folder is C:\Users\liuwei\AppData\Local\Temp, you can change it by custom_tmp_path in config.yaml
+[2024-05-31 16:51] !!! Exception during processing!!! (ProtocolError('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)), '(Request ID: 7dc40f6a-71ec-4b00-a3b9-5f592f5d0e0f)')
+[2024-05-31 16:51] Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1275, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1133, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\urllib3\connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1275, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\ssl.py", line 1133, in read
+    return self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\ComfyUI\execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "f:\ComfyUI\execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "f:\ComfyUI\execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\node_wrappers\leres.py", line 21, in execute
+    model = LeresDetector.from_pretrained().to(model_management.get_torch_device())
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\src\controlnet_aux\leres\__init__.py", line 30, in from_pretrained
+    pix2pix_model_path = custom_hf_download(pretrained_model_or_path, pix2pix_filename)
+  File "F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\src\controlnet_aux\util.py", line 322, in custom_hf_download
+    model_path = hf_hub_download(repo_id=pretrained_model_or_path,
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 1457, in hf_hub_download
+    http_get(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 451, in http_get
+    r = _request_wrapper(
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\file_download.py", line 408, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\huggingface_hub\utils\_http.py", line 67, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: (ProtocolError('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)), '(Request ID: 7dc40f6a-71ec-4b00-a3b9-5f592f5d0e0f)')
+
+[2024-05-31 16:51] Prompt executed in 551.85 seconds
+[2024-05-31 16:51] 1girl, solo, breasts, looking_at_viewer, short_hair, bangs, skirt, animal_ears, bare_shoulders, jewelry, sitting, green_eyes, full_body, pink_hair, wings, midriff, rabbit_ears, high_heels, bracelet, crop_top, anklet, fairy_wings, fairy, yellow_footwear, butterfly_wings
+[2024-05-31 16:51] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:51] [90ma = 1girl, solo, breasts, looking_at_viewer, short_hair, bangs, skirt, animal_ears, bare_shoulders, jewelry, sitting, green_eyes, full_body, pink_hair, wings, midriff, rabbit_ears, high_heels, bracelet, crop_top, anklet, fairy_wings, fairy, yellow_footwear, butterfly_wings 
+b = (masterpiece, best quality),AFK,,fairy, female, pink hair, wings, fantasy, sitting, blue top, yellow shorts, high heels, animal ears, anime style, looking at viewer, delicate, ethereal, light effects, jewelry, bracelet, short hair, elegant, butterfly wings, magical, whimsical, serene expression, detailed illustration, vibrant. 
+c = [0m
+[2024-05-31 16:51] a + b + c = [92m1girl, solo, breasts, looking_at_viewer, short_hair, bangs, skirt, animal_ears, bare_shoulders, jewelry, sitting, green_eyes, full_body, pink_hair, wings, midriff, rabbit_ears, high_heels, bracelet, crop_top, anklet, fairy_wings, fairy, yellow_footwear, butterfly_wings(masterpiece, best quality),AFK,,fairy, female, pink hair, wings, fantasy, sitting, blue top, yellow shorts, high heels, animal ears, anime style, looking at viewer, delicate, ethereal, light effects, jewelry, bracelet, short hair, elegant, butterfly wings, magical, whimsical, serene expression, detailed illustration, vibrant.[0m
+[2024-05-31 16:51] model_type EPS
+[2024-05-31 16:51] Using pytorch attention in VAE
+[2024-05-31 16:51] Using pytorch attention in VAE
+[2024-05-31 16:52] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 16:52] Requested to load SD1ClipModel
+[2024-05-31 16:52] Loading 1 new model
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 16:52] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 16:52] Requested to load AutoencoderKL
+[2024-05-31 16:52] Loading 1 new model
+[2024-05-31 16:52] Requested to load BaseModel
+[2024-05-31 16:52] Loading 1 new model
+[2024-05-31 16:52] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00, 10.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  9.92it/s]
+[2024-05-31 16:52] Prompt executed in 86.99 seconds
+[2024-05-31 16:53] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 16:53] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:53] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,person, silhouette, hugging, light burst, abstract, blue background, white rays, radiating energy, artistic, dynamic, capturing moment, action, central figure, human figure, purple accents, embracing light, glow, powerful imagery, expressive art, connection, vibrant 표현, 손 포지션, 중요한 소재 
+c = [0m
+[2024-05-31 16:53] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,person, silhouette, hugging, light burst, abstract, blue background, white rays, radiating energy, artistic, dynamic, capturing moment, action, central figure, human figure, purple accents, embracing light, glow, powerful imagery, expressive art, connection, vibrant 표현, 손 포지션, 중요한 소재[0m
+[2024-05-31 16:53] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.48it/s]
+[2024-05-31 16:53] Prompt executed in 10.80 seconds
+[2024-05-31 16:54] got prompt
+[2024-05-31 16:54] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 16:54] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:54] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,Human silhouette, abstract figure, embrace, glowing light, hands reaching out, blue background, radiating lines, energy burst, artistic. 
+c = [0m
+[2024-05-31 16:54] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,Human silhouette, abstract figure, embrace, glowing light, hands reaching out, blue background, radiating lines, energy burst, artistic.[0m
+[2024-05-31 16:54]  ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ... ... (more hidden) ...
+[2024-05-31 16:54] Prompt executed in 9.16 seconds
+[2024-05-31 16:56] got prompt
+[2024-05-31 16:56] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 16:56] 
+[91mEvaluate Strings:[0m
+[2024-05-31 16:56] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,abstract, person, embracing light, rays, glowing, silhouette, hands, energy, mystical, blue background, pink highlights, dynamic, artistic, ethereal, motion, subjective figure, strong contrast, visual impact, dramatic, expressive, vibrant, compelling scene 
+c = [0m
+[2024-05-31 16:56] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,abstract, person, embracing light, rays, glowing, silhouette, hands, energy, mystical, blue background, pink highlights, dynamic, artistic, ethereal, motion, subjective figure, strong contrast, visual impact, dramatic, expressive, vibrant, compelling scene[0m
+[2024-05-31 16:56] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 15.06it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 15.10it/s]
+[2024-05-31 16:56] Prompt executed in 8.96 seconds
+[2024-05-31 17:04] got prompt
+[2024-05-31 17:04] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:04] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:04] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,person, human figure, hugging, bright light, burst, powerful, blue tones, radiant, arms outstretched, expressive, shadowed face, motion, dynamic, energy, abstract, emotional, impact, dramatic lighting, paint strokes, digital art, illustration 
+c = [0m
+[2024-05-31 17:04] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,person, human figure, hugging, bright light, burst, powerful, blue tones, radiant, arms outstretched, expressive, shadowed face, motion, dynamic, energy, abstract, emotional, impact, dramatic lighting, paint strokes, digital art, illustration[0m
+[2024-05-31 17:04] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 14.93it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 15.01it/s]
+[2024-05-31 17:04] Prompt executed in 9.04 seconds
+[2024-05-31 17:10] got prompt
+[2024-05-31 17:11] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:11] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:11] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,digital art, person silhouette, hug, abstract, starburst, hands, blue background, purple highlights, embrace, glow effect, beams, emotional, touch, radiating lines, centered composition, unity, luminous, energetic, vibrant 
+c = [0m
+[2024-05-31 17:11] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,digital art, person silhouette, hug, abstract, starburst, hands, blue background, purple highlights, embrace, glow effect, beams, emotional, touch, radiating lines, centered composition, unity, luminous, energetic, vibrant[0m
+[2024-05-31 17:11] Requested to load ControlNet
+[2024-05-31 17:11] Loading 1 new model
+[2024-05-31 17:11] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.74it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.53it/s]
+[2024-05-31 17:11] Prompt executed in 9.70 seconds
+[2024-05-31 17:18] got prompt
+[2024-05-31 17:18] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:18] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:18] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,digital art, person, hugging, light rays, abstract, blue background, pink highlights, silhouette, ethereal, dynamic composition, star shapes, embrace, glowing center, abstract expressionism, energetic, radiating lines, figures, conceptual, motion, thematic. 
+c = [0m
+[2024-05-31 17:18] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,digital art, person, hugging, light rays, abstract, blue background, pink highlights, silhouette, ethereal, dynamic composition, star shapes, embrace, glowing center, abstract expressionism, energetic, radiating lines, figures, conceptual, motion, thematic.[0m
+[2024-05-31 17:18] Requested to load ControlNet
+[2024-05-31 17:18] Loading 1 new model
+[2024-05-31 17:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.60it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.61it/s]
+[2024-05-31 17:18] Prompt executed in 9.41 seconds
+[2024-05-31 17:23] got prompt
+[2024-05-31 17:23] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:23] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:23] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,person, embrace, abstract art, silhouette, blue background, dynamic light, radiating lines, hugging, intimate moment, emotional expression, painted illustration, energy burst, visual impact, brush strokes, conceptual art, glowing center. 
+c = [0m
+[2024-05-31 17:23] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,person, embrace, abstract art, silhouette, blue background, dynamic light, radiating lines, hugging, intimate moment, emotional expression, painted illustration, energy burst, visual impact, brush strokes, conceptual art, glowing center.[0m
+[2024-05-31 17:23] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:23] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:23] Requested to load ControlNet
+[2024-05-31 17:23] Loading 1 new model
+[2024-05-31 17:23] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.87it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.86it/s]
+[2024-05-31 17:23] Prompt executed in 10.85 seconds
+[2024-05-31 17:23] got prompt
+[2024-05-31 17:23] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:23] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:23] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,abstract art, painting, human figure, embrace, blue background, white rays, purple tones, brush strokes, hugging, light burst, no distinct facial features, dynamic composition, expressive artwork, surreal, energetic, visual impact, luminous center, two people, closeness, emotional connection 
+c = [0m
+[2024-05-31 17:23] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,abstract art, painting, human figure, embrace, blue background, white rays, purple tones, brush strokes, hugging, light burst, no distinct facial features, dynamic composition, expressive artwork, surreal, energetic, visual impact, luminous center, two people, closeness, emotional connection[0m
+[2024-05-31 17:23] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:23] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:23] Requested to load ControlNet
+[2024-05-31 17:23] Loading 1 new model
+[2024-05-31 17:23] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.66it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.67it/s]
+[2024-05-31 17:23] Prompt executed in 9.74 seconds
+[2024-05-31 17:25] got prompt
+[2024-05-31 17:26] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:26] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:26] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,abstract painting, human figure, embracing, radiating light, expressive, dynamic lines, energetic, vibrant, spiritual, emotional, blue and purple hues, inner light, white streaks, watercolor effect, symbolic representation, contemporary art 
+c = [0m
+[2024-05-31 17:26] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,abstract painting, human figure, embracing, radiating light, expressive, dynamic lines, energetic, vibrant, spiritual, emotional, blue and purple hues, inner light, white streaks, watercolor effect, symbolic representation, contemporary art[0m
+[2024-05-31 17:26] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:26] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:26] Requested to load ControlNet
+[2024-05-31 17:26] Loading 1 new model
+[2024-05-31 17:26] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.56it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 10.47it/s]
+[2024-05-31 17:26] Prompt executed in 9.79 seconds
+[2024-05-31 17:28] got prompt
+[2024-05-31 17:28] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:28] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:28] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,painting, person, hugging, abstract, blue background, pink light, rays of light, silhouette, mid-action, embrace, energy, digital art, expressive, vibrant, dynamic composition, spiritual, emotional scene, contemporary style, colorful, bold shapes, creative. 
+c = [0m
+[2024-05-31 17:28] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,painting, person, hugging, abstract, blue background, pink light, rays of light, silhouette, mid-action, embrace, energy, digital art, expressive, vibrant, dynamic composition, spiritual, emotional scene, contemporary style, colorful, bold shapes, creative.[0m
+[2024-05-31 17:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 17:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:28] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:28] Requested to load ControlNet
+[2024-05-31 17:28] Requested to load ControlNet
+[2024-05-31 17:28] Loading 2 new models
+[2024-05-31 17:28] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.25it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.28it/s]
+[2024-05-31 17:28] Prompt executed in 10.63 seconds
+[2024-05-31 17:30] got prompt
+[2024-05-31 17:30] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 17:30] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:30] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, black hair, bangs, large eyes, wearing headphones, plaid bow, white blouse, lace details, taking selfie, indoors, sitting on gaming chair, AutoFull chair, youthful appearance, light skin, delicate features, symmetrical face, holding strands of hair, feminine, Asian, kawaii style, fashion, black and white outfit. 
+c = [0m
+[2024-05-31 17:30] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, black hair, bangs, large eyes, wearing headphones, plaid bow, white blouse, lace details, taking selfie, indoors, sitting on gaming chair, AutoFull chair, youthful appearance, light skin, delicate features, symmetrical face, holding strands of hair, feminine, Asian, kawaii style, fashion, black and white outfit.[0m
+[2024-05-31 17:30] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 17:30] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:30] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:30] Requested to load ControlNet
+[2024-05-31 17:30] Loading 1 new model
+[2024-05-31 17:30] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.20it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.19it/s]
+[2024-05-31 17:30] Prompt executed in 11.42 seconds
+[2024-05-31 17:31] got prompt
+[2024-05-31 17:31] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:31] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:31] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,abstract, figure, embrace, luminous burst, purple rays, blue background, spread arms, silhouette, radiance, touching, beams, dynamic, light rays, energy, human figure, overlapping shapes, light source, impact, artistic representation, bursting light 
+c = [0m
+[2024-05-31 17:31] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,abstract, figure, embrace, luminous burst, purple rays, blue background, spread arms, silhouette, radiance, touching, beams, dynamic, light rays, energy, human figure, overlapping shapes, light source, impact, artistic representation, bursting light[0m
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:31] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:31] Requested to load ControlNet
+[2024-05-31 17:31] Requested to load ControlNet
+[2024-05-31 17:31] Loading 2 new models
+[2024-05-31 17:31] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.28it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.33it/s]
+[2024-05-31 17:31] Prompt executed in 17.30 seconds
+[2024-05-31 17:32] got prompt
+[2024-05-31 17:32] 1girl, solo, short_hair, traditional_media, silhouette, abstract
+[2024-05-31 17:32] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:32] [90ma = 1girl, solo, short_hair, traditional_media, silhouette, abstract 
+b = (masterpiece, best quality),AFK,,silhouette, person, blue, purple, pink, hands, rays, light, abstract, glowing, energy, full-body, embrace, explosion, emanating, dynamic, burst, artistic, painting 
+c = [0m
+[2024-05-31 17:32] a + b + c = [92m1girl, solo, short_hair, traditional_media, silhouette, abstract(masterpiece, best quality),AFK,,silhouette, person, blue, purple, pink, hands, rays, light, abstract, glowing, energy, full-body, embrace, explosion, emanating, dynamic, burst, artistic, painting[0m
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 17:32] got prompt
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:32] Requested to load ControlNet
+[2024-05-31 17:32] Requested to load ControlNet
+[2024-05-31 17:32] Loading 2 new models
+[2024-05-31 17:32] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.34it/s]
+[2024-05-31 17:32] Prompt executed in 17.58 seconds
+[2024-05-31 17:32] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 17:32] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:32] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, bangs, black headphones, large eyes, full lips, black and white checkered bow, lace blouse, black dress, youthful appearance, pale skin, sitting, holding hair, straight hair, frills, selfie, close-up, casual setting, gaming chair 
+c = [0m
+[2024-05-31 17:32] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, bangs, black headphones, large eyes, full lips, black and white checkered bow, lace blouse, black dress, youthful appearance, pale skin, sitting, holding hair, straight hair, frills, selfie, close-up, casual setting, gaming chair[0m
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:32] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:32] Requested to load ControlNet
+[2024-05-31 17:32] Loading 1 new model
+[2024-05-31 17:32] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.22it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.23it/s]
+[2024-05-31 17:33] Prompt executed in 18.86 seconds
+[2024-05-31 17:33] got prompt
+[2024-05-31 17:33] 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie
+[2024-05-31 17:33] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:33] [90ma = 1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie 
+b = (masterpiece, best quality),AFK,,woman, long hair, wearing headphones, black and white checkered dress, frilled white blouse, large bow, lace, close-up, indoors, portrait, holding hair, room with white branding on chair, youthful look, makeup, Asian, modern attire, soft focus, streamer setup, accessories 
+c = [0m
+[2024-05-31 17:33] a + b + c = [92m1girl, solo, long_hair, looking_at_viewer, bangs, brown_hair, shirt, dress, bow, jewelry, closed_mouth, white_shirt, upper_body, bowtie, black_eyes, plaid, black_bow, headphones, selfie(masterpiece, best quality),AFK,,woman, long hair, wearing headphones, black and white checkered dress, frilled white blouse, large bow, lace, close-up, indoors, portrait, holding hair, room with white branding on chair, youthful look, makeup, Asian, modern attire, soft focus, streamer setup, accessories[0m
+[2024-05-31 17:33] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\ControlNetHED.pth
+[2024-05-31 17:33] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:33] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:33] Requested to load ControlNet
+[2024-05-31 17:33] Loading 1 new model
+[2024-05-31 17:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.24it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00,  8.24it/s]
+[2024-05-31 17:33] Prompt executed in 12.06 seconds
+[2024-05-31 17:38] got prompt
+[2024-05-31 17:38] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:38] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:38] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, computer graphics, character design, cartoon figure, gray hair, orange face, black and white clothing, button-up shirt, suspenders, tie, vector art, measuring tools, digital editing, color adjustment, workspace layout, desktop software, ruler tool, interface elements, design application, human-like, primary shapes 
+c = [0m
+[2024-05-31 17:38] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, computer graphics, character design, cartoon figure, gray hair, orange face, black and white clothing, button-up shirt, suspenders, tie, vector art, measuring tools, digital editing, color adjustment, workspace layout, desktop software, ruler tool, interface elements, design application, human-like, primary shapes[0m
+[2024-05-31 17:38] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:38] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:38] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.41it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.46it/s]
+[2024-05-31 17:38] Prompt executed in 9.35 seconds
+[2024-05-31 17:39] got prompt
+[2024-05-31 17:39] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:39] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:39] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, male character, gray hair, orange face, circle face, black eyes, white shirt, suspenders, holding object, vector art, digital artwork, design software interface, measurement tool, color adjustment panel, cartoon style, simplistic design, black pants, partial screenshot of software, digital drawing, graphic design, character creation 
+c = [0m
+[2024-05-31 17:39] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, male character, gray hair, orange face, circle face, black eyes, white shirt, suspenders, holding object, vector art, digital artwork, design software interface, measurement tool, color adjustment panel, cartoon style, simplistic design, black pants, partial screenshot of software, digital drawing, graphic design, character creation[0m
+[2024-05-31 17:39] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.51it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.50it/s]
+[2024-05-31 17:39] Prompt executed in 9.09 seconds
+[2024-05-31 17:41] got prompt
+[2024-05-31 17:41] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:41] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:41] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon figure, vector illustration, grey hair, orange face, black and white attire, white shirt, black vest, holding basketball, eyeglasses, simplistic design, front view, casual pose, male character, design software interface, measurement tool, Chinese language, palette window. 
+c = [0m
+[2024-05-31 17:41] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon figure, vector illustration, grey hair, orange face, black and white attire, white shirt, black vest, holding basketball, eyeglasses, simplistic design, front view, casual pose, male character, design software interface, measurement tool, Chinese language, palette window.[0m
+[2024-05-31 17:41] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.34it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.27it/s]
+[2024-05-31 17:41] Prompt executed in 9.17 seconds
+[2024-05-31 17:41] got prompt
+[2024-05-31 17:41] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:41] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:41] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,Illustration, cartoon figure, orange face, grey hair, white clothing, black pants, vector art, digital design, character with number 4, holding an object, round body shape, Adobe Illustrator interface, measurement tool, color adjustment panel, artboard background. 
+c = [0m
+[2024-05-31 17:41] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,Illustration, cartoon figure, orange face, grey hair, white clothing, black pants, vector art, digital design, character with number 4, holding an object, round body shape, Adobe Illustrator interface, measurement tool, color adjustment panel, artboard background.[0m
+[2024-05-31 17:41] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.45it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.51it/s]
+[2024-05-31 17:41] Prompt executed in 9.18 seconds
+[2024-05-31 17:42] got prompt
+[2024-05-31 17:42] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:42] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:42] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustrator workspace, cartoon character, grey hair, round head, orange face, black suit, white shirt, tie, round hands, simple design, vector art, measurement tool, color adjustment panel, Chinese UI, open file tab 
+c = [0m
+[2024-05-31 17:42] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustrator workspace, cartoon character, grey hair, round head, orange face, black suit, white shirt, tie, round hands, simple design, vector art, measurement tool, color adjustment panel, Chinese UI, open file tab[0m
+[2024-05-31 17:42] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:42] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:42] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.18it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.17it/s]
+[2024-05-31 17:42] Prompt executed in 9.50 seconds
+[2024-05-31 17:43] got prompt
+[2024-05-31 17:43] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:43] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:43] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,illustration, cartoon person, gray hair, orange face, black and white clothing, holding a basketball, digital art, geometric shapes, suspenders, button-down shirt, smiling face, simple design, vector image, measuring tool visible, software interface, Chinese language, design software, ruler guide, color palette. 
+c = [0m
+[2024-05-31 17:43] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,illustration, cartoon person, gray hair, orange face, black and white clothing, holding a basketball, digital art, geometric shapes, suspenders, button-down shirt, smiling face, simple design, vector image, measuring tool visible, software interface, Chinese language, design software, ruler guide, color palette.[0m
+[2024-05-31 17:43] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:43] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:43] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.47it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.51it/s]
+[2024-05-31 17:43] Prompt executed in 9.35 seconds
+[2024-05-31 17:44] got prompt
+[2024-05-31 17:44] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:44] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:44] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,vector illustration, cartoon character, gray hair, orange face, white background, shirt, suit, tie, glasses, bald, holding object, arm at sides, standing pose, buttons, fashion accessory, tools panel, measurement tool, professional software, workspace, humorous design, round face, large eyes, simplified features, graphic design, digital art 
+c = [0m
+[2024-05-31 17:44] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,vector illustration, cartoon character, gray hair, orange face, white background, shirt, suit, tie, glasses, bald, holding object, arm at sides, standing pose, buttons, fashion accessory, tools panel, measurement tool, professional software, workspace, humorous design, round face, large eyes, simplified features, graphic design, digital art[0m
+[2024-05-31 17:44] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:44] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:44] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.08it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 12.94it/s]
+[2024-05-31 17:44] Prompt executed in 9.58 seconds
+[2024-05-31 17:46] got prompt
+[2024-05-31 17:47] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:47] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:47] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,数字图像, 图形设计软件, 软件界面, 矢量图, 绘图工具, 角色设计, 卡通人物, 手绘插画, 动漫角色, 电脑屏幕, 调色板, 尺寸工具, 灰色头发, 黄色皮肤, 穿着白色衬衫, 黑色背带, 圆形身体, 设计草图, 截屏 
+c = [0m
+[2024-05-31 17:47] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,数字图像, 图形设计软件, 软件界面, 矢量图, 绘图工具, 角色设计, 卡通人物, 手绘插画, 动漫角色, 电脑屏幕, 调色板, 尺寸工具, 灰色头发, 黄色皮肤, 穿着白色衬衫, 黑色背带, 圆形身体, 设计草图, 截屏[0m
+[2024-05-31 17:47] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:47] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:47] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.63it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.69it/s]
+[2024-05-31 17:47] Prompt executed in 9.20 seconds
+[2024-05-31 17:48] got prompt
+[2024-05-31 17:48] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:48] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:48] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,vector art, illustration, cartoon character, orange face, gray hair, short hair, round eyes, smiling expression, holding basketball, black pants, white shirt, black suspenders, colored bow tie, measuring tool displayed, design software interface, screen capture, digital art, creative design process, workspace, tools and palettes 
+c = [0m
+[2024-05-31 17:48] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,vector art, illustration, cartoon character, orange face, gray hair, short hair, round eyes, smiling expression, holding basketball, black pants, white shirt, black suspenders, colored bow tie, measuring tool displayed, design software interface, screen capture, digital art, creative design process, workspace, tools and palettes[0m
+[2024-05-31 17:48] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:48] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:48] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.91it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.91it/s]
+[2024-05-31 17:48] Prompt executed in 9.18 seconds
+[2024-05-31 17:48] got prompt
+[2024-05-31 17:48] simple_background, white_background, pokemon_\(creature\), no_humans, color_guide
+[2024-05-31 17:48] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:48] [90ma = simple_background, white_background, pokemon_\(creature\), no_humans, color_guide 
+b = (masterpiece, best quality),AFK,,cartoon character, circular face, orange skin, grey hair, straight hair, black eyes, black and white outfit, holding object, geometric design, digital illustration, smile, simple background, upper body, casual pose, diagram markings, creative design, art software interface, measurement tools, color picker, toolbar options. 
+c = [0m
+[2024-05-31 17:48] a + b + c = [92msimple_background, white_background, pokemon_\(creature\), no_humans, color_guide(masterpiece, best quality),AFK,,cartoon character, circular face, orange skin, grey hair, straight hair, black eyes, black and white outfit, holding object, geometric design, digital illustration, smile, simple background, upper body, casual pose, diagram markings, creative design, art software interface, measurement tools, color picker, toolbar options.[0m
+[2024-05-31 17:48] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model.pth
+[2024-05-31 17:48] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\sk_model2.pth
+[2024-05-31 17:48] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.87it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:01<00:00, 13.82it/s]
+[2024-05-31 17:48] Prompt executed in 9.16 seconds
+[2024-05-31 17:52] got prompt
+[2024-05-31 17:52] Failed to validate prompt for output 130:
+[2024-05-31 17:52] * Image Remove Background (rembg) 129:
+[2024-05-31 17:52]   - Required input is missing: model_name
+[2024-05-31 17:52] Output will be ignored
+[2024-05-31 17:52] 
+[2024-05-31 17:52] 
+[91mEvaluate Strings:[0m
+[2024-05-31 17:52] [90ma =  
+b = prompt 
+c = [0m
+[2024-05-31 17:52] a + b + c = [92mprompt[0m
+[2024-05-31 17:52] model_type EPS
+[2024-05-31 17:54] Using pytorch attention in VAE
+[2024-05-31 17:54] Using pytorch attention in VAE
+[2024-05-31 17:55] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-05-31 17:55] Requested to load SDXLClipModel
+[2024-05-31 17:55] Loading 1 new model
+[2024-05-31 17:57] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\table5_pidinet.pth
+[2024-05-31 17:59] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\body_pose_model.pth
+[2024-05-31 17:59] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\hand_pose_model.pth
+[2024-05-31 17:59] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\facenet.pth
+[2024-05-31 18:00] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\res101.pth
+[2024-05-31 18:01] Failed to find F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\latest_net_G.pth.
+ Downloading from huggingface.co
+[2024-05-31 18:01] cacher folder is C:\Users\liuwei\AppData\Local\Temp, you can change it by custom_tmp_path in config.yaml
+[2024-05-31 18:03] latest_net_G.pth: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 318M/318M [02:52<00:00, 1.84MB/s]latest_net_G.pth: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 318M/318M [02:52<00:00, 1.85MB/s]
+[2024-05-31 18:03] model_path is F:\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts\lllyasviel/Annotators\latest_net_G.pth
+[2024-05-31 18:04] Requested to load AutoencoderKL
+[2024-05-31 18:04] Loading 1 new model
+[2024-05-31 18:04] Requested to load SDXL
+[2024-05-31 18:04] Loading 1 new model
+[2024-05-31 18:07] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28/28 [02:57<00:00,  4.67s/it]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28/28 [02:57<00:00,  6.33s/it]
+[2024-05-31 18:07] Requested to load AutoencoderKL
+[2024-05-31 18:07] Loading 1 new model
+[2024-05-31 18:08] Prompt executed in 965.26 seconds
+[2024-06-03 10:02] FETCH DATA from: F:\ComfyUI\custom_nodes\ComfyUI-Manager\extension-node-map.json
+[2024-06-03 10:02] Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\liuwei\AppData\Local\anaconda3\envs\tobaigc\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。

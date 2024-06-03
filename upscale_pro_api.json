@@ -1,0 +1,256 @@
+{
+  "3": {
+    "inputs": {
+      "ckpt_name": "igame_v1.4_mix_vae.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "028e65c0ea85eab2477a060e.jpeg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "upscale_model": [
+        "7",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model_name": "RealESRGAN_x4.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "8": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.5,
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "13": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": "",
+      "trailing_comma": "solo, looking_at_viewer, short_hair, blue_eyes, simple_background, brown_hair, 1boy, closed_mouth, male_focus, grey_background, facial_hair, scar, thick_eyebrows, portrait, beard, scar_on_face, scar_across_eye, stubble",
+      "exclude_tags": "",
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "16": {
+    "inputs": {
+      "python_expression": "a + b",
+      "print_to_console": "True",
+      "a": [
+        "28",
+        0
+      ],
+      "b": [
+        "13",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": [
+        "16",
+        0
+      ],
+      "clip": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "19": {
+    "inputs": {
+      "text": "embedding:badoutV2.pt",
+      "clip": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "20": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "upscalepro",
+      "images": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "upscale_by": 1,
+      "seed": 1064492699223439,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.33,
+      "mode_type": "Linear",
+      "tile_width": 512,
+      "tile_height": 512,
+      "mask_blur": 8,
+      "tile_padding": 32,
+      "seam_fix_mode": "None",
+      "seam_fix_denoise": 1,
+      "seam_fix_width": 64,
+      "seam_fix_mask_blur": 8,
+      "seam_fix_padding": 16,
+      "force_uniform_tiles": "enable",
+      "tiled_decode": false,
+      "image": [
+        "8",
+        0
+      ],
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "26",
+        0
+      ],
+      "negative": [
+        "19",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "upscale_model": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "UltimateSDUpscale",
+    "_meta": {
+      "title": "Ultimate SD Upscale"
+    }
+  },
+  "25": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": 1024,
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "26": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": [
+        "18",
+        0
+      ],
+      "control_net": [
+        "27",
+        0
+      ],
+      "image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "27": {
+    "inputs": {
+      "control_net_name": "control_v11f1e_sd15_tile_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "28": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

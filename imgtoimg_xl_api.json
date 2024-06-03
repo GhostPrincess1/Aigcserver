@@ -1,0 +1,789 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "igame_SDXL_V1.31.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "106",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "control_net": [
+        "7",
+        0
+      ],
+      "image": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "control_net_name": "controlnet-sd-xl-1.0-softedge-dexined.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "8": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "5",
+        1
+      ],
+      "control_net": [
+        "9",
+        0
+      ],
+      "image": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "control_net_name": "t2iadapter_color_sd14v1.pth"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "10": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "5",
+        1
+      ],
+      "control_net": [
+        "11",
+        0
+      ],
+      "image": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "control_net_name": "OpenPoseXL2.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "12": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 0.5,
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "10",
+        1
+      ],
+      "control_net": [
+        "13",
+        0
+      ],
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "13": {
+    "inputs": {
+      "control_net_name": "TTPLANET_Controlnet_Tile_realistic_v1_fp32.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "14": {
+    "inputs": {
+      "seed": 60904582658692,
+      "steps": 28,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "85",
+        0
+      ],
+      "negative": [
+        "85",
+        1
+      ],
+      "latent_image": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "16": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "20": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "21": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "22": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "26": {
+    "inputs": {
+      "stop_at_clip_layer": -1
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "44": {
+    "inputs": {
+      "lora_name": "Fay.safetensors",
+      "strength_model": 0,
+      "strength_clip": 0
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "45": {
+    "inputs": {
+      "image": "20231009-095839 (6).jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "51": {
+    "inputs": {
+      "resolution": 1024,
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ColorPreprocessor",
+    "_meta": {
+      "title": "Color Pallete"
+    }
+  },
+  "52": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": [
+        "118",
+        0
+      ],
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "OpenposePreprocessor",
+    "_meta": {
+      "title": "OpenPose Pose"
+    }
+  },
+  "53": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": [
+        "131",
+        0
+      ],
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "55": {
+    "inputs": {
+      "pixels": [
+        "98",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "59": {
+    "inputs": {
+      "amount": 1,
+      "samples": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "Repeat Latent Batch"
+    }
+  },
+  "71": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "control_net": [
+        "72",
+        0
+      ],
+      "image": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "72": {
+    "inputs": {
+      "control_net_name": "control-lora-canny-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "73": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "static.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "85": {
+    "inputs": {
+      "strength": 0,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "71",
+        0
+      ],
+      "negative": [
+        "71",
+        1
+      ],
+      "control_net": [
+        "86",
+        0
+      ],
+      "image": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "86": {
+    "inputs": {
+      "control_net_name": "control-lora-depth-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "98": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 1024,
+      "height": 1536,
+      "crop": "center",
+      "image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "filename_prefix": "img2img_xl",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "100": {
+    "inputs": {
+      "safe": "enable",
+      "resolution": [
+        "115",
+        0
+      ],
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PiDiNetPreprocessor",
+    "_meta": {
+      "title": "PiDiNet Soft-Edge Lines"
+    }
+  },
+  "102": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "True",
+      "a": [
+        "108",
+        0
+      ],
+      "b": [
+        "133",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "106": {
+    "inputs": {
+      "text": [
+        "102",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 1,
+      "character_threshold": 1,
+      "replace_underscore": "",
+      "trailing_comma": false,
+      "exclude_tags": "",
+      "image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "111": {
+    "inputs": {
+      "low_threshold": 100,
+      "high_threshold": 200,
+      "resolution": [
+        "112",
+        0
+      ],
+      "image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "CannyEdgePreprocessor",
+    "_meta": {
+      "title": "Canny Edge"
+    }
+  },
+  "112": {
+    "inputs": {
+      "image_gen_width": [
+        "113",
+        0
+      ],
+      "image_gen_height": [
+        "113",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "113": {
+    "inputs": {
+      "image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "115": {
+    "inputs": {
+      "image_gen_width": [
+        "116",
+        0
+      ],
+      "image_gen_height": [
+        "116",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "116": {
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "118": {
+    "inputs": {
+      "image_gen_width": [
+        "119",
+        0
+      ],
+      "image_gen_height": [
+        "119",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "119": {
+    "inputs": {
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "121": {
+    "inputs": {
+      "image_gen_width": [
+        "122",
+        0
+      ],
+      "image_gen_height": [
+        "122",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "122": {
+    "inputs": {
+      "image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "126": {
+    "inputs": {
+      "rm_nearest": 0,
+      "rm_background": 0,
+      "boost": "disable",
+      "resolution": [
+        "121",
+        0
+      ],
+      "image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "LeReS-DepthMapPreprocessor",
+    "_meta": {
+      "title": "LeReS Depth Map (enable boost for leres++)"
+    }
+  },
+  "129": {
+    "inputs": {
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "Image Remove Background (rembg)",
+    "_meta": {
+      "title": "Image Remove Background (rembg)"
+    }
+  },
+  "130": {
+    "inputs": {
+      "filename_prefix": "rem_img2img_xl",
+      "images": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "131": {
+    "inputs": {
+      "image_gen_width": [
+        "132",
+        0
+      ],
+      "image_gen_height": [
+        "132",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "132": {
+    "inputs": {
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "133": {
+    "inputs": {
+      "prompt": "prompt"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

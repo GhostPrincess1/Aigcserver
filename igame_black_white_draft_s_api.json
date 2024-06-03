@@ -1,0 +1,764 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 80352676222484,
+      "steps": 25,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.8,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "Igame_Character_SDXL.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": [
+        "33",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": [
+        "23",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "15": {
+    "inputs": {
+      "strength": 0.5,
+      "start_percent": 0,
+      "end_percent": 0.5,
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "16",
+        0
+      ],
+      "image": [
+        "56",
+        0
+      ],
+      "weights_override": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "16": {
+    "inputs": {
+      "control_net_name": "ttplanetSDXLControlnet_v20Fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "17": {
+    "inputs": {
+      "base_multiplier": 0.825,
+      "flip_weights": false
+    },
+    "class_type": "ScaledSoftControlNetWeights",
+    "_meta": {
+      "title": "Scaled Soft Weights 🛂🅐🅒🅝"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prompt": "Lowres, bad, error, fewer, extra, missing, worst quality, jpeg artifacts, bad quality, watermark, signature, extra digits, artistic error, username, abstract, artist logo, artist name, signature, bad fingers, bad hand"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "24": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": false,
+      "trailing_comma": false,
+      "exclude_tags": "english_text",
+      "image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "26": {
+    "inputs": {
+      "pixels": [
+        "56",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "32": {
+    "inputs": {
+      "prompt": "trq,TRQ style,"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "33": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "32",
+        0
+      ],
+      "b": [
+        "24",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "52": {
+    "inputs": {
+      "seed": 965773996559734,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "53",
+        0
+      ],
+      "positive": [
+        "58",
+        0
+      ],
+      "negative": [
+        "58",
+        1
+      ],
+      "latent_image": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "53": {
+    "inputs": {
+      "ckpt_name": "animagineXLV3_v30.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": [
+        "62",
+        0
+      ],
+      "clip": [
+        "53",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "55": {
+    "inputs": {
+      "text": [
+        "61",
+        0
+      ],
+      "clip": [
+        "53",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "56": {
+    "inputs": {
+      "samples": [
+        "52",
+        0
+      ],
+      "vae": [
+        "53",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "58": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 0.5,
+      "positive": [
+        "54",
+        0
+      ],
+      "negative": [
+        "55",
+        0
+      ],
+      "control_net": [
+        "59",
+        0
+      ],
+      "image": [
+        "68",
+        0
+      ],
+      "weights_override": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "59": {
+    "inputs": {
+      "control_net_name": "ttplanetSDXLControlnet_v20Fp16.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "60": {
+    "inputs": {
+      "base_multiplier": 0.825,
+      "flip_weights": false
+    },
+    "class_type": "ScaledSoftControlNetWeights",
+    "_meta": {
+      "title": "Scaled Soft Weights 🛂🅐🅒🅝"
+    }
+  },
+  "61": {
+    "inputs": {
+      "prompt": "Lowres, bad, error, fewer, extra, missing, worst quality, jpeg artifacts, bad quality, watermark, signature, extra digits, artistic error, username, abstract, artist logo, artist name, signature, bad fingers, bad hand"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "62": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": false,
+      "trailing_comma": false,
+      "exclude_tags": "english_text",
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "63": {
+    "inputs": {
+      "pixels": [
+        "68",
+        0
+      ],
+      "vae": [
+        "53",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "68": {
+    "inputs": {
+      "size": 1280,
+      "interpolation_mode": "bicubic",
+      "image": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "JWImageResizeByLongerSide",
+    "_meta": {
+      "title": "Image Resize by Longer Side"
+    }
+  },
+  "74": {
+    "inputs": {
+      "upscale_model": [
+        "75",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "75": {
+    "inputs": {
+      "model_name": "ESRGAN_4x.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "76": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.3,
+      "image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "77": {
+    "inputs": {
+      "pixels": [
+        "76",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "79": {
+    "inputs": {
+      "seed": 238111456216596,
+      "steps": 25,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.55,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "83": {
+    "inputs": {
+      "samples": [
+        "79",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "84": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "86": {
+    "inputs": {
+      "image": "ill_pokemon_07.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "87": {
+    "inputs": {
+      "seed": 822300540227599,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "96",
+        0
+      ],
+      "positive": [
+        "91",
+        0
+      ],
+      "negative": [
+        "91",
+        1
+      ],
+      "latent_image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "88": {
+    "inputs": {
+      "text": [
+        "109",
+        0
+      ],
+      "clip": [
+        "96",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": [
+        "108",
+        0
+      ],
+      "clip": [
+        "96",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "samples": [
+        "87",
+        0
+      ],
+      "vae": [
+        "96",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "91": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "88",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "control_net": [
+        "92",
+        0
+      ],
+      "image": [
+        "98",
+        0
+      ],
+      "weights_override": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "92": {
+    "inputs": {
+      "control_net_name": "control-lora-canny-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "93": {
+    "inputs": {
+      "base_multiplier": 0.825,
+      "flip_weights": false
+    },
+    "class_type": "ScaledSoftControlNetWeights",
+    "_meta": {
+      "title": "Scaled Soft Weights 🛂🅐🅒🅝"
+    }
+  },
+  "96": {
+    "inputs": {
+      "ckpt_name": "dreamshaperXL_v21TurboDPMSDE.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "98": {
+    "inputs": {
+      "preprocessor": "CannyEdgePreprocessor",
+      "resolution": [
+        "99",
+        0
+      ],
+      "image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "99": {
+    "inputs": {
+      "image_gen_width": [
+        "100",
+        0
+      ],
+      "image_gen_height": [
+        "100",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "100": {
+    "inputs": {
+      "image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "101": {
+    "inputs": {
+      "size": 1280,
+      "interpolation_mode": "bicubic",
+      "image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "JWImageResizeByLongerSide",
+    "_meta": {
+      "title": "Image Resize by Longer Side"
+    }
+  },
+  "106": {
+    "inputs": {
+      "width": [
+        "100",
+        0
+      ],
+      "height": [
+        "100",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "108": {
+    "inputs": {
+      "prompt": "Lowres, bad, error, fewer, extra, missing, worst quality, jpeg artifacts, bad quality, watermark, signature, extra digits, artistic error, username, abstract, artist logo, artist name, signature, bad fingers, bad hand"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "109": {
+    "inputs": {
+      "prompt": "1 girl"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

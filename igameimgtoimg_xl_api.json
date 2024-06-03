@@ -1,0 +1,587 @@
+{
+  "8": {
+    "inputs": {
+      "samples": [
+        "36",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ckpt_name": "AFK_Normal_SDXL.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "36": {
+    "inputs": {
+      "seed": 6540878942590,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "140",
+        0
+      ],
+      "positive": [
+        "155",
+        0
+      ],
+      "negative": [
+        "155",
+        1
+      ],
+      "latent_image": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "49": {
+    "inputs": {
+      "text": [
+        "126",
+        0
+      ],
+      "clip": [
+        "140",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "50": {
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+      "clip": [
+        "140",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image_gen_width": [
+        "99",
+        0
+      ],
+      "image_gen_height": [
+        "99",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "98": {
+    "inputs": {
+      "image": "下载 (1).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "104": {
+    "inputs": {
+      "control_net_name": "control-lora-canny-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "105": {
+    "inputs": {
+      "strength": 0.55,
+      "start_percent": 0,
+      "end_percent": 0.55,
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "50",
+        0
+      ],
+      "control_net": [
+        "104",
+        0
+      ],
+      "image": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "108": {
+    "inputs": {
+      "low_threshold": 100,
+      "high_threshold": 200,
+      "resolution": [
+        "97",
+        0
+      ],
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "CannyEdgePreprocessor",
+    "_meta": {
+      "title": "Canny Edge"
+    }
+  },
+  "124": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": false,
+      "trailing_comma": false,
+      "exclude_tags": "",
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "126": {
+    "inputs": {
+      "python_expression": "a + b + c",
+      "print_to_console": "False",
+      "a": [
+        "139",
+        0
+      ],
+      "b": [
+        "124",
+        0
+      ],
+      "c": ""
+    },
+    "class_type": "Evaluate Strings",
+    "_meta": {
+      "title": "Evaluate Strings"
+    }
+  },
+  "133": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 960,
+      "height": 1324,
+      "crop": "center",
+      "image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "136": {
+    "inputs": {
+      "pixels": [
+        "133",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "139": {
+    "inputs": {
+      "prompt": "trq,TRQ style,"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "140": {
+    "inputs": {
+      "lora_name": "add_detail_igame_SDXL.safetensors",
+      "strength_model": 0.7000000000000001,
+      "strength_clip": 0.7000000000000001,
+      "model": [
+        "14",
+        0
+      ],
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "145": {
+    "inputs": {
+      "image_gen_width": [
+        "146",
+        0
+      ],
+      "image_gen_height": [
+        "146",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "146": {
+    "inputs": {
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "147": {
+    "inputs": {
+      "control_net_name": "OpenPoseXL2.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "148": {
+    "inputs": {
+      "strength": 0.55,
+      "start_percent": 0,
+      "end_percent": 0.55,
+      "positive": [
+        "105",
+        0
+      ],
+      "negative": [
+        "105",
+        1
+      ],
+      "control_net": [
+        "147",
+        0
+      ],
+      "image": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "151": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": [
+        "145",
+        0
+      ],
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "152": {
+    "inputs": {
+      "image_gen_width": [
+        "153",
+        0
+      ],
+      "image_gen_height": [
+        "153",
+        1
+      ],
+      "resize_mode": "Just Resize",
+      "original_image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "PixelPerfectResolution",
+    "_meta": {
+      "title": "Pixel Perfect Resolution"
+    }
+  },
+  "153": {
+    "inputs": {
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "154": {
+    "inputs": {
+      "control_net_name": "TTPLANET_Controlnet_Tile_realistic_v1_fp32.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "155": {
+    "inputs": {
+      "strength": 0.55,
+      "start_percent": 0,
+      "end_percent": 0.55,
+      "positive": [
+        "148",
+        0
+      ],
+      "negative": [
+        "148",
+        1
+      ],
+      "control_net": [
+        "154",
+        0
+      ],
+      "image": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "157": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": [
+        "152",
+        0
+      ],
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt"
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "158": {
+    "inputs": {
+      "pyrUp_iters": 3,
+      "resolution": [
+        "152",
+        0
+      ],
+      "image": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "TilePreprocessor",
+    "_meta": {
+      "title": "Tile"
+    }
+  },
+  "159": {
+    "inputs": {
+      "upscale_model": [
+        "160",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "160": {
+    "inputs": {
+      "model_name": "ESRGAN_4x.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "161": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 0.38,
+      "image": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "162": {
+    "inputs": {
+      "seed": 55924971920761,
+      "steps": 28,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.33,
+      "model": [
+        "140",
+        0
+      ],
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "50",
+        0
+      ],
+      "latent_image": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "167": {
+    "inputs": {
+      "pixels": [
+        "161",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "169": {
+    "inputs": {
+      "samples": [
+        "162",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "170": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}
